@@ -1,0 +1,2294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Japan Itinerary · Ms. Viraj Chudasama & Friends</title>
+<script src="image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #faf5ec;
+    --paper: #f5ede0;
+    --sand:  #ebdfca;
+    --sand-dark: #d9c8a8;
+    --ink: #2a221c;
+    --ink-soft: #4a3f33;
+    --mute: #847363;
+    --line: #d8c9ad;
+    --rust: #b1532c;       /* terracotta accent */
+    --rust-deep: #8a3d1f;
+    --indigo: #1f4e7a;     /* subtle from logo */
+    --crimson: #b1342f;    /* subtle from logo */
+    --leaf: #5e6b3f;
+    --gold: #a6843a;
+    --shadow: 0 1px 0 rgba(42,34,28,.05), 0 12px 32px -16px rgba(42,34,28,.20);
+    --serif: "Cormorant Garamond", "Noto Serif JP", Georgia, serif;
+    --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --jp: "Noto Serif JP", "Cormorant Garamond", serif;
+    --script: "Caveat", "Cormorant Garamond", cursive;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    background: var(--ivory);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+
+  /* ===== Layout shell ===== */
+  .doc { max-width: 1100px; margin: 0 auto; padding: 0; }
+  .page {
+    background: var(--ivory);
+    padding: 96px 80px;
+    position: relative;
+    border-bottom: 1px solid color-mix(in oklab, var(--line) 50%, transparent);
+  }
+  .page:last-child { border-bottom: none; }
+
+  /* Headings */
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; color: var(--ink); letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  h1 { font-size: 88px; line-height: 0.95; font-weight: 400; }
+  h2 { font-size: 52px; line-height: 1.02; font-weight: 400; }
+  h3 { font-size: 28px; line-height: 1.15; font-weight: 500; }
+  h4 { font-size: 18px; font-weight: 600; font-family: var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust); }
+  p { margin: 0 0 14px; color: var(--ink-soft); text-wrap: pretty; }
+  .lead { font-family: var(--serif); font-size: 24px; line-height: 1.45; color: var(--ink-soft); font-weight: 400; }
+  .lead-italic { font-style: italic; }
+  .jp { font-family: var(--jp); font-weight: 500; }
+  .script { font-family: var(--script); }
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--rust);
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::before {
+    content: ""; width: 28px; height: 1px; background: var(--rust);
+  }
+  .eyebrow.center::before, .eyebrow.center::after {
+    content: ""; width: 28px; height: 1px; background: var(--rust);
+  }
+  .eyebrow.center { justify-content: center; }
+  .rule { height: 1px; background: var(--line); margin: 32px 0; border: 0; }
+  .rule-thick { height: 2px; background: var(--ink); margin: 28px 0; border: 0; }
+
+  /* ===== Cover ===== */
+  .cover {
+    min-height: 100vh;
+    padding: 56px 64px;
+    background: var(--paper);
+    background-image:
+      radial-gradient(1200px 600px at 80% -10%, rgba(177,83,44,0.10), transparent 60%),
+      radial-gradient(900px 500px at 0% 110%, rgba(31,78,122,0.07), transparent 60%);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .cover-top { display: flex; justify-content: space-between; align-items: center; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { width: 64px; height: 64px; object-fit: contain; }
+  .brand .brand-text { font-family: var(--serif); font-size: 18px; line-height: 1.1; color: var(--ink); }
+  .brand .brand-text small { display: block; font-family: var(--sans); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--mute); margin-top: 2px; }
+  .cover-meta { text-align: right; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); }
+  .cover-meta strong { display: block; color: var(--ink); font-weight: 600; font-size: 12px; margin-bottom: 4px; }
+
+  .cover-body { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; padding: 32px 0; }
+  .cover-hero h1 {
+    font-size: clamp(96px, 12vw, 168px);
+    letter-spacing: -0.03em;
+    line-height: 0.85;
+    margin: 0 0 8px;
+  }
+  .cover-hero .jp-mark { font-family: var(--jp); font-size: 64px; color: var(--rust); font-weight: 500; line-height: 1; }
+  .cover-hero .tag {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 30px;
+    color: var(--ink-soft);
+    margin-top: 20px;
+    line-height: 1.3;
+    max-width: 520px;
+  }
+  .cover-hero .route {
+    margin-top: 28px;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .cover-hero .route span { display: inline-block; margin: 0 6px; color: var(--rust); }
+
+  .cover-card {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    padding: 36px 32px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .cover-card::before {
+    content: ""; position: absolute; top: -8px; left: -8px; right: 12px; bottom: 12px;
+    border: 1px solid var(--rust); z-index: -1; opacity: 0.4;
+  }
+  .cover-card .for {
+    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--mute);
+  }
+  .cover-card h2 {
+    font-size: 38px; margin: 8px 0 24px;
+  }
+  .cover-card .detail-row {
+    display: grid; grid-template-columns: 80px 1fr; gap: 16px; padding: 14px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .cover-card .detail-row:last-child { border-bottom: 1px solid var(--line); }
+  .cover-card .detail-row .label {
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute);
+    align-self: center;
+  }
+  .cover-card .detail-row .value { color: var(--ink); font-weight: 500; }
+  .cover-card .detail-row .value small { display: block; color: var(--mute); font-weight: 400; font-size: 12px; margin-top: 2px; }
+
+  .cover-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
+  .cover-quote {
+    font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink-soft);
+    max-width: 420px; line-height: 1.5;
+  }
+  .cover-quote .dash { color: var(--rust); font-style: normal; margin-right: 6px; }
+  .cover-edition { text-align: right; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); }
+  .cover-edition .big { font-family: var(--serif); font-size: 22px; color: var(--ink); letter-spacing: -0.01em; text-transform: none; }
+
+  /* ===== Sakura corner accent ===== */
+  .corner-sakura {
+    position: absolute; top: 32px; right: 32px; width: 80px; height: 80px;
+    opacity: 0.18; pointer-events: none;
+  }
+
+  /* ===== At-a-glance ===== */
+  .glance-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+  .glance-cell {
+    background: var(--ivory); padding: 28px 24px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .glance-cell .num {
+    font-family: var(--serif); font-size: 64px; line-height: 1; color: var(--rust); font-weight: 400;
+  }
+  .glance-cell .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); margin-top: 6px;
+  }
+
+  .highlights-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 48px;
+  }
+  .highlight {
+    background: var(--paper); padding: 28px 24px;
+    border-left: 2px solid var(--rust);
+  }
+  .highlight h3 {
+    font-size: 22px; margin-bottom: 8px;
+  }
+  .highlight p { font-size: 14px; margin: 0; color: var(--ink-soft); }
+  .highlight .h-jp { font-family: var(--jp); font-size: 13px; color: var(--rust); margin-bottom: 4px; }
+
+  /* ===== Route Map ===== */
+  .route-map {
+    margin-top: 40px;
+    background: var(--paper);
+    padding: 56px 48px;
+    border: 1px solid var(--line);
+  }
+  .route-track {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    align-items: start;
+    position: relative;
+  }
+  .route-track::before {
+    content: ""; position: absolute; top: 14px; left: 12.5%; right: 12.5%;
+    border-top: 2px dashed var(--rust); z-index: 0;
+  }
+  .route-stop { position: relative; text-align: center; padding-top: 36px; z-index: 1; }
+  .route-stop::before {
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--ivory); border: 2px solid var(--rust);
+  }
+  .route-stop::after {
+    content: ""; position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+    width: 12px; height: 12px; border-radius: 50%; background: var(--rust);
+  }
+  .route-stop .city { font-family: var(--serif); font-size: 28px; color: var(--ink); margin-bottom: 2px; }
+  .route-stop .jp-city { font-family: var(--jp); font-size: 14px; color: var(--rust); margin-bottom: 6px; }
+  .route-stop .dates { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); }
+  .route-stop .nights { display: inline-block; margin-top: 8px; font-size: 12px; color: var(--ink-soft); }
+  .route-stop .nights b { color: var(--rust); font-weight: 600; }
+
+  /* ===== Flight pill row ===== */
+  .flights {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;
+  }
+  .flight {
+    background: var(--paper); padding: 28px;
+    border: 1px solid var(--line);
+    display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  }
+  .flight .plane {
+    width: 48px; height: 48px;
+    background: var(--ivory); border: 1px solid var(--line); border-radius: 50%;
+    display: grid; place-items: center; color: var(--indigo);
+  }
+  .flight .plane svg { width: 24px; height: 24px; }
+  .flight .meta { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); }
+  .flight .meta b { color: var(--ink); font-weight: 600; }
+  .flight .route-detail { font-family: var(--serif); font-size: 22px; color: var(--ink); margin-top: 4px; }
+  .flight .time { text-align: right; font-family: var(--serif); font-size: 32px; color: var(--rust); }
+  .flight .time small { display: block; font-family: var(--sans); font-size: 11px; color: var(--mute); letter-spacing: 0.18em; text-transform: uppercase; }
+
+  /* ===== Hotels ===== */
+  .hotels {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px;
+  }
+  .hotel {
+    background: var(--ivory); border: 1px solid var(--line);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+  }
+  .hotel .img {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--sand) 0%, var(--sand-dark) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hotel .img image-slot { width: 100%; height: 100%; display: block; }
+  .hotel .img .badge {
+    position: absolute; top: 16px; left: 16px;
+    background: var(--ivory); padding: 6px 12px;
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--rust); font-weight: 600;
+    z-index: 2; pointer-events: none;
+  }
+  .hotel .body { padding: 22px 22px 24px; }
+  .hotel .city { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); margin-bottom: 4px; }
+  .hotel h3 { font-size: 24px; line-height: 1.2; margin-bottom: 8px; }
+  .hotel .stay { font-size: 13px; color: var(--ink-soft); margin-bottom: 14px; }
+  .hotel .stay b { color: var(--rust); }
+  .hotel p.note { font-size: 13px; color: var(--mute); margin: 0; line-height: 1.5; font-style: italic; }
+
+  /* ===== Day pages ===== */
+  .day {
+    display: grid; grid-template-columns: 220px 1fr;
+    gap: 56px; padding: 80px 0;
+    border-top: 1px dashed var(--line);
+  }
+  .day:first-of-type { border-top: none; padding-top: 0; }
+  .day-meta { position: sticky; top: 24px; align-self: start; }
+  .day-meta .num-block {
+    font-family: var(--serif);
+  }
+  .day-meta .num-block .day-label {
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust);
+    font-family: var(--sans); font-weight: 600;
+  }
+  .day-meta .num-block .day-num {
+    font-size: 96px; line-height: 0.9; color: var(--ink); font-weight: 400;
+    margin: 4px 0;
+  }
+  .day-meta .num-block .day-date {
+    font-size: 14px; color: var(--ink-soft); font-family: var(--sans);
+  }
+  .day-meta .num-block .day-date b { color: var(--ink); font-weight: 600; }
+  .day-meta .city-tag {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink); padding: 6px 10px; border: 1px solid var(--ink);
+  }
+  .day-meta .jp-name {
+    font-family: var(--jp); font-size: 32px; color: var(--rust); margin-top: 16px; line-height: 1; font-weight: 500;
+  }
+
+  .day-content h2 { font-size: 44px; line-height: 1.05; margin-bottom: 12px; }
+  .day-content .day-lead { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--ink-soft); line-height: 1.45; margin-bottom: 28px; }
+
+  .day-img {
+    aspect-ratio: 16/9; margin: 0 0 28px;
+    background: linear-gradient(135deg, var(--sand) 0%, var(--sand-dark) 100%);
+    position: relative; overflow: hidden;
+  }
+  .day-img image-slot { width: 100%; height: 100%; display: block; }
+  .day-img .caption {
+    position: absolute; bottom: 14px; left: 14px;
+    background: rgba(250,245,236,0.92); padding: 6px 12px;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink); font-weight: 500;
+    z-index: 2; pointer-events: none;
+  }
+
+  /* image-slot empty-state styling — warm, on-brand */
+  image-slot {
+    --is-empty-bg: var(--paper);
+    --is-empty-border: 1px dashed var(--sand-dark);
+    --is-empty-fg: var(--mute);
+  }
+
+  .timeline { margin: 24px 0 28px; }
+  .moment {
+    display: grid; grid-template-columns: 92px 1fr; gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .moment:last-child { border-bottom: 1px solid var(--line); }
+  .moment .when {
+    font-family: var(--serif); font-size: 22px; color: var(--rust); line-height: 1;
+    padding-top: 2px;
+  }
+  .moment .when small { display: block; font-family: var(--sans); font-size: 10px; color: var(--mute); letter-spacing: 0.22em; text-transform: uppercase; margin-top: 4px; }
+  .moment .what h4 { font-family: var(--serif); font-size: 18px; color: var(--ink); text-transform: none; letter-spacing: 0; font-weight: 600; margin-bottom: 4px; }
+  .moment .what p { margin: 0; font-size: 14px; line-height: 1.55; }
+
+  .day-foot {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-top: 24px;
+  }
+  .day-info {
+    background: var(--paper); padding: 18px 22px;
+    border-left: 2px solid var(--rust);
+  }
+  .day-info h5 {
+    margin: 0 0 6px; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--rust); font-family: var(--sans); font-weight: 600;
+  }
+  .day-info p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+  .day-info ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--ink-soft); }
+  .day-info li { margin-bottom: 3px; }
+
+  /* ===== Section headers ===== */
+  .section-head { text-align: center; margin-bottom: 12px; }
+  .section-head h2 { font-size: 64px; line-height: 1; margin-top: 18px; }
+  .section-head .jp-sub { font-family: var(--jp); font-size: 18px; color: var(--rust); margin-top: 8px; }
+  .section-head .lede { max-width: 640px; margin: 20px auto 0; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--ink-soft); }
+
+  /* ===== Two-column lists ===== */
+  .two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    margin-top: 40px;
+  }
+  .list-block h3 {
+    font-size: 24px; margin-bottom: 16px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .list-block h3 .icon {
+    font-family: var(--jp); font-size: 18px; color: var(--rust);
+  }
+  .list-block ul { list-style: none; margin: 0; padding: 0; }
+  .list-block li {
+    padding: 10px 0 10px 28px; position: relative;
+    border-bottom: 1px solid color-mix(in oklab, var(--line) 50%, transparent);
+    font-size: 14px; color: var(--ink-soft); line-height: 1.4;
+  }
+  .list-block li:last-child { border-bottom: none; }
+  .list-block.include li::before {
+    content: ""; position: absolute; left: 4px; top: 17px;
+    width: 12px; height: 6px; border-left: 2px solid var(--leaf); border-bottom: 2px solid var(--leaf);
+    transform: rotate(-45deg);
+  }
+  .list-block.exclude li::before {
+    content: ""; position: absolute; left: 4px; top: 18px;
+    width: 12px; height: 1px; background: var(--crimson);
+  }
+
+  /* ===== Payment table ===== */
+  .pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+  .pay-card { background: var(--paper); padding: 28px; border-top: 3px solid var(--rust); }
+  .pay-card h3 { font-size: 26px; margin-bottom: 16px; }
+  .pay-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 12px;
+    padding: 12px 0; border-bottom: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .pay-row:last-child { border-bottom: none; }
+  .pay-row .when { color: var(--ink-soft); }
+  .pay-row .amt { font-family: var(--serif); font-weight: 600; color: var(--rust); font-size: 18px; }
+
+  /* ===== Note cards ===== */
+  .notes-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px;
+  }
+  .note {
+    background: var(--paper); padding: 24px 26px;
+    border: 1px solid var(--line);
+  }
+  .note h4 { font-family: var(--serif); font-size: 20px; text-transform: none; letter-spacing: 0; color: var(--ink); margin-bottom: 10px; font-weight: 600; }
+  .note h4 .badge { font-family: var(--sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rust); margin-right: 10px; background: var(--ivory); padding: 3px 8px; vertical-align: middle; border: 1px solid var(--rust); }
+  .note p { margin: 0; font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; }
+  .note ul { margin: 4px 0 0; padding-left: 18px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ===== Packing ===== */
+  .packing {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px;
+  }
+  .pack-cat h4 {
+    color: var(--rust); font-family: var(--serif); font-size: 22px; font-weight: 600;
+    letter-spacing: 0; text-transform: none; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rust);
+  }
+  .pack-cat ul { list-style: none; margin: 0; padding: 0; }
+  .pack-cat li {
+    font-size: 13.5px; color: var(--ink-soft); padding: 6px 0 6px 22px; position: relative;
+  }
+  .pack-cat li::before {
+    content: ""; position: absolute; left: 0; top: 12px; width: 11px; height: 11px;
+    border: 1.5px solid var(--mute);
+  }
+
+  /* ===== Essentials ===== */
+  .essentials {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+  .ess {
+    background: var(--ivory); padding: 28px 26px;
+  }
+  .ess .icon-jp { font-family: var(--jp); font-size: 36px; color: var(--rust); line-height: 1; }
+  .ess h4 { font-family: var(--serif); font-size: 22px; text-transform: none; letter-spacing: 0; color: var(--ink); margin: 12px 0 8px; font-weight: 600; }
+  .ess p { margin: 0; font-size: 13.5px; line-height: 1.55; }
+  .ess .kv {
+    margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line);
+    font-size: 12px; color: var(--ink-soft);
+  }
+  .ess .kv b { color: var(--ink); }
+
+  /* ===== Footer / closing ===== */
+  .closing {
+    background: var(--paper);
+    background-image: radial-gradient(800px 400px at 50% 0%, rgba(177,83,44,0.10), transparent 60%);
+    text-align: center;
+    padding: 120px 80px;
+  }
+  .closing .jp-mark { font-family: var(--jp); font-size: 56px; color: var(--rust); margin-bottom: 16px; line-height: 1; }
+  .closing h2 { font-size: 64px; line-height: 1; margin-bottom: 20px; }
+  .closing .farewell { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--ink-soft); max-width: 560px; margin: 0 auto 40px; line-height: 1.5; }
+  .closing .signoff { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .closing .signoff img { width: 80px; opacity: 0.9; }
+  .closing .signoff .name { font-family: var(--serif); font-size: 22px; color: var(--ink); }
+  .closing .signoff .name small { display: block; font-family: var(--sans); font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--mute); margin-top: 4px; }
+
+  /* ===== Contents page ===== */
+  .contents-page { padding: 96px 80px; }
+  .contents-head {
+    display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 32px;
+    padding-bottom: 24px; border-bottom: 2px solid var(--ink);
+  }
+  .contents-head .eyebrow { margin-bottom: 12px; }
+  .contents-head h2 { font-size: 88px; line-height: 0.95; margin: 0; }
+  .contents-head .jp-mark { font-family: var(--jp); font-size: 32px; color: var(--rust); }
+  .contents-head .meta-side { text-align: right; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mute); }
+  .contents-head .meta-side b { display: block; font-family: var(--serif); font-size: 22px; color: var(--ink); letter-spacing: -0.01em; text-transform: none; font-weight: 500; }
+
+  .contents-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+    grid-auto-flow: column;
+    margin-top: 48px;
+  }
+  .toc-group.part-1 { grid-column: 1; grid-row: 1; }
+  .toc-group.part-2 { grid-column: 2; grid-row: 1 / span 2; }
+  .toc-group.part-3 { grid-column: 1; grid-row: 2; margin-top: 40px; }
+  .toc-group {}
+  .toc-group .group-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.32em; text-transform: uppercase; color: var(--rust);
+    margin-bottom: 6px;
+  }
+  .toc-group .group-jp {
+    font-family: var(--jp); font-size: 14px; color: var(--mute); margin-bottom: 18px;
+  }
+  .toc-row {
+    display: grid; grid-template-columns: 32px 1fr auto;
+    align-items: baseline; gap: 14px;
+    padding: 11px 0;
+    border-bottom: 1px dotted var(--line);
+    color: var(--ink); text-decoration: none;
+  }
+  .toc-row:hover .toc-title { color: var(--rust); }
+  .toc-row .toc-no {
+    font-family: var(--serif); font-size: 18px; color: var(--rust); font-style: italic; font-weight: 500;
+  }
+  .toc-row .toc-title {
+    font-family: var(--serif); font-size: 19px; line-height: 1.25; color: var(--ink); transition: color .15s;
+  }
+  .toc-row .toc-title small {
+    display: block; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--mute); margin-top: 3px; font-weight: 500;
+  }
+  .toc-row .toc-page {
+    font-family: var(--serif); font-size: 18px; color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .contents-foot {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    font-size: 12px; color: var(--mute);
+  }
+  .contents-foot .pull {
+    font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--ink-soft); line-height: 1.4;
+  }
+  .contents-foot .pull .dash { color: var(--rust); font-style: normal; margin-right: 6px; }
+
+  @media (max-width: 900px) {
+    .contents-page { padding: 56px 24px; }
+    .contents-head { grid-template-columns: 1fr; gap: 16px; }
+    .contents-head h2 { font-size: 56px; }
+    .contents-head .meta-side { text-align: left; }
+    .contents-grid { grid-template-columns: 1fr; gap: 32px; grid-auto-flow: row; }
+    .toc-group.part-1, .toc-group.part-2, .toc-group.part-3 {
+      grid-column: 1; grid-row: auto; margin-top: 0;
+    }
+    .contents-foot { grid-template-columns: 1fr; }
+  }
+
+  /* ===== Dining list ===== */
+  .dining-list { margin-top: 40px; }
+  .dining-row {
+    display: grid; grid-template-columns: 130px 1fr; gap: 28px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .dining-row:last-child { border-bottom: 1px solid var(--line); }
+  .dining-date {
+    text-align: left;
+  }
+  .dining-date .dining-day {
+    font-family: var(--serif); font-size: 26px; color: var(--rust); line-height: 1;
+  }
+  .dining-date .dining-when {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--mute); margin-top: 6px;
+  }
+  .dining-body .dining-city {
+    font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--mute); margin-bottom: 4px;
+  }
+  .dining-body h3 { font-size: 24px; margin-bottom: 8px; }
+  .dining-body p { font-size: 14px; line-height: 1.55; margin: 0 0 6px; }
+  .dining-body p.dining-jain {
+    font-size: 13px; color: var(--ink-soft);
+    padding: 8px 12px; background: var(--paper);
+    border-left: 2px solid var(--leaf); margin-top: 8px;
+  }
+  .dining-body p.dining-jain b { color: var(--leaf); }
+
+  /* ===== Floating index (web only) ===== */
+  .toc {
+    position: fixed; right: 24px; top: 50%; transform: translateY(-50%);
+    background: var(--ivory); border: 1px solid var(--line); padding: 14px 16px;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mute);
+    box-shadow: var(--shadow); z-index: 20; max-height: 80vh; overflow: auto;
+    display: none;
+  }
+  @media (min-width: 1400px) { .toc { display: block; } }
+  .toc a { display: block; color: var(--ink-soft); text-decoration: none; padding: 4px 0; border-left: 2px solid transparent; padding-left: 10px; }
+  .toc a:hover { color: var(--rust); border-color: var(--rust); }
+  .toc .toc-title { color: var(--rust); font-weight: 600; margin-bottom: 8px; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .page { padding: 64px 28px; }
+    h1 { font-size: 56px; }
+    h2 { font-size: 36px; }
+    .cover { padding: 32px 24px; }
+    .cover-body { grid-template-columns: 1fr; gap: 32px; }
+    .cover-hero h1 { font-size: 88px; }
+    .cover-card { padding: 28px 22px; }
+    .cover-card h2 { font-size: 30px; }
+    .cover-card .detail-row { grid-template-columns: 64px 1fr; }
+    .cover-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .cover-edition { text-align: left; }
+    .glance-grid { grid-template-columns: repeat(2, 1fr); }
+    .glance-cell .num { font-size: 48px; }
+    .highlights-grid { grid-template-columns: 1fr; }
+    .route-map { padding: 32px 24px; }
+    .route-track { grid-template-columns: 1fr; gap: 28px; }
+    .route-track::before { display: none; }
+    .route-stop { text-align: left; padding-top: 0; padding-left: 52px; min-height: 28px; }
+    .route-stop::before {
+      left: 0; top: 6px; transform: none;
+      width: 24px; height: 24px;
+    }
+    .route-stop::after {
+      left: 6px; top: 12px; transform: none;
+      width: 12px; height: 12px;
+    }
+    .route-stop .city { font-size: 24px; line-height: 1.1; }
+    .flights { grid-template-columns: 1fr; }
+    .flight { grid-template-columns: auto 1fr; gap: 16px; padding: 22px; }
+    .flight .time { grid-column: 1 / -1; text-align: left; font-size: 26px; margin-top: 4px; }
+    .hotels { grid-template-columns: 1fr; }
+    .day { grid-template-columns: 1fr; gap: 24px; padding: 56px 0; }
+    .day-meta { position: static; }
+    .day-meta .num-block .day-num { font-size: 64px; }
+    .day-content h2 { font-size: 32px; }
+    .day-content .day-lead { font-size: 18px; }
+    .two-col { grid-template-columns: 1fr; }
+    .pay-grid { grid-template-columns: 1fr; }
+    .notes-grid { grid-template-columns: 1fr; }
+    .packing { grid-template-columns: 1fr 1fr; }
+    .essentials { grid-template-columns: 1fr; }
+    .closing { padding: 80px 24px; }
+    .closing h2 { font-size: 44px; }
+    .section-head h2 { font-size: 42px; }
+    .moment { grid-template-columns: 76px 1fr; gap: 14px; }
+    .moment .when { font-size: 18px; }
+    .day-foot { grid-template-columns: 1fr; }
+    .dining-row { grid-template-columns: 96px 1fr; gap: 16px; padding: 18px 0; }
+    .dining-body h3 { font-size: 20px; }
+    .toc { display: none; }
+  }
+
+  @media (max-width: 560px) {
+    .page { padding: 48px 20px; }
+    h1 { font-size: 44px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 22px; }
+    .lead { font-size: 18px; }
+    .cover { padding: 28px 20px; min-height: auto; }
+    .cover-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .cover-meta { text-align: left; }
+    .cover-hero h1 { font-size: 64px; }
+    .cover-hero .jp-mark { font-size: 40px; }
+    .cover-hero .tag { font-size: 22px; }
+    .cover-hero .route { font-size: 11px; }
+    .cover-card { padding: 22px 18px; }
+    .cover-card h2 { font-size: 24px; }
+    .cover-card .detail-row { grid-template-columns: 60px 1fr; gap: 12px; padding: 12px 0; font-size: 13px; }
+    .brand img { width: 48px; height: 48px; }
+    .brand .brand-text { font-size: 15px; }
+    .contents-head h2 { font-size: 44px; }
+    .toc-row { grid-template-columns: 24px 1fr auto; gap: 10px; padding: 9px 0; }
+    .toc-row .toc-title { font-size: 16px; }
+    .toc-row .toc-title small { font-size: 10px; }
+    .toc-row .toc-no, .toc-row .toc-page { font-size: 15px; }
+    .section-head h2 { font-size: 32px; }
+    .section-head .lede { font-size: 17px; }
+    .glance-cell { padding: 20px 18px; }
+    .glance-cell .num { font-size: 40px; }
+    .highlight { padding: 22px 18px; }
+    .day-meta .num-block .day-num { font-size: 52px; }
+    .day-content h2 { font-size: 26px; }
+    .day-content .day-lead { font-size: 16px; }
+    .moment { grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; }
+    .moment .when { font-size: 16px; }
+    .moment .when small { font-size: 9px; }
+    .moment .what h4 { font-size: 16px; }
+    .moment .what p { font-size: 13px; }
+    .hotel .body { padding: 18px; }
+    .hotel h3 { font-size: 20px; }
+    .flight .route-detail { font-size: 18px; }
+    .packing { grid-template-columns: 1fr; }
+    .closing { padding: 60px 20px; }
+    .closing h2 { font-size: 34px; }
+    .closing .jp-mark { font-size: 38px; }
+    .closing .farewell { font-size: 18px; }
+    .dining-row { grid-template-columns: 1fr; gap: 8px; }
+    .dining-date { display: flex; gap: 12px; align-items: baseline; }
+    .dining-date .dining-when { margin-top: 0; }
+  }
+
+  /* ===== Print stylesheet ===== */
+  @media print {
+    @page { size: A4; margin: 14mm 14mm; }
+    html, body { background: #fff !important; }
+    body { font-size: 11pt; }
+    .doc { max-width: none; }
+    .toc { display: none !important; }
+    .page { padding: 0 0 18mm; border-bottom: none; page-break-after: always; }
+    .page.no-break { page-break-after: auto; }
+    .cover { min-height: auto; padding: 0; page-break-after: always; }
+    .cover-hero h1 { font-size: 92pt; }
+    h1 { font-size: 36pt; }
+    h2 { font-size: 26pt; }
+    .section-head h2 { font-size: 32pt; }
+    .day { page-break-inside: avoid; page-break-after: always; padding: 0 0 12mm; grid-template-columns: 180px 1fr; gap: 24px; }
+    .day:first-of-type { border-top: none; }
+    .day-meta .num-block .day-num { font-size: 60pt; }
+    .day-meta { position: static; }
+    .day-img { aspect-ratio: 16/8; }
+    .closing { page-break-before: always; padding: 60px 40px; }
+    .moment { padding: 8px 0; }
+    .hotels { gap: 12px; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Floating TOC removed — see Contents page after cover ===== -->
+
+<div class="doc">
+
+<!-- =========================================== COVER =========================================== -->
+<section class="cover page no-break" id="cover" data-screen-label="01 Cover">
+  <svg class="corner-sakura" viewBox="0 0 100 100" aria-hidden="true">
+    <g fill="#b1532c">
+      <circle cx="50" cy="20" r="10"/>
+      <circle cx="78" cy="38" r="10"/>
+      <circle cx="70" cy="68" r="10"/>
+      <circle cx="32" cy="68" r="10"/>
+      <circle cx="22" cy="38" r="10"/>
+      <circle cx="50" cy="50" r="6" fill="#a6843a"/>
+    </g>
+  </svg>
+
+  <div class="cover-top">
+    <div class="brand">
+      <img src="assets/sba-logo.jpg" alt="Shreeji Bapa Aviation"/>
+      <div class="brand-text">
+        Shreeji Bapa Aviation
+        <small>Curated Journeys · Est. India</small>
+      </div>
+    </div>
+    <div class="cover-meta">TRAVEL ITINERARY</div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-hero">
+      <div class="jp-mark">日本へようこそ</div>
+      <h1>Japan</h1>
+      <div class="tag">A twelve-day passage through ancient temples, mountain views and neon-lit streets — written for you and your friends.</div>
+      <div class="route">Tokyo <span>·</span> Kyoto <span>·</span> Nara <span>·</span> Osaka</div>
+    </div>
+
+    <aside class="cover-card">
+      <div class="for">Prepared for</div>
+      <h2>Ms. Viraj Chudasama <span style="font-family:var(--script); color:var(--rust); font-size:32px;">&amp; friends</span></h2>
+
+      <div class="detail-row">
+        <span class="label">Dates</span>
+        <span class="value">25 May — 5 June 2026<small>Twelve days · eleven nights</small></span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Pax</span>
+        <span class="value">20 Adults · 2 Children<small>Including a 4-yr and 8-yr-old</small></span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Cities</span>
+        <span class="value">Tokyo · Kyoto · Nara · Osaka<small>Four cities, one journey</small></span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Travel</span>
+        <span class="value">Singapore Airlines<small>SQ012 in · SQ619 out</small></span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-quote">
+      <span class="dash">—</span>“Every land has its season; Japan has the art of holding all four at once. Welcome to yours.”
+    </div>
+    <div class="cover-edition">May · June 2026
+FINAL ITINERARY</div>
+  </div>
+</section>
+
+<!-- =========================================== CONTENTS =========================================== -->
+<section class="page contents-page" id="contents" data-screen-label="02 Contents">
+  <div class="contents-head">
+    <div>
+      <span class="eyebrow">Table of Contents</span>
+      <div class="jp-mark">目次</div>
+      <h2>Contents</h2>
+    </div>
+    <div class="meta-side">
+      <b>Japan · May–June 2026</b>
+      Ms. Viraj Chudasama &amp; Friends<br/>
+      12 days &middot; 11 nights
+    </div>
+  </div>
+
+  <div class="contents-grid">
+
+    <div class="toc-group part-1">
+      <div class="group-label">Part One · The Plan</div>
+      <div class="group-jp">概要 · Overview</div>
+
+      <a class="toc-row" href="#glance">
+        <span class="toc-no">I</span>
+        <span class="toc-title">At a glance<small>Twelve days in brief</small></span>
+        <span class="toc-page">03</span>
+      </a>
+      <a class="toc-row" href="#flights">
+        <span class="toc-no">II</span>
+        <span class="toc-title">Flights<small>Wings and wheels</small></span>
+        <span class="toc-page">04</span>
+      </a>
+      <a class="toc-row" href="#route">
+        <span class="toc-no">III</span>
+        <span class="toc-title">Route &amp; hotels<small>Three homes, one journey</small></span>
+        <span class="toc-page">05</span>
+      </a>
+    </div>
+
+    <div class="toc-group part-2">
+      <div class="group-label">Part Two · The Days</div>
+      <div class="group-jp">日程 · Day by day</div>
+
+      <a class="toc-row" href="#day1">
+        <span class="toc-no">01</span>
+        <span class="toc-title">Welcome to Tokyo<small>Mon · 25 May · Arrival</small></span>
+        <span class="toc-page">06</span>
+      </a>
+      <a class="toc-row" href="#day2">
+        <span class="toc-no">02</span>
+        <span class="toc-title">The Tokyo you've imagined<small>Tue · 26 May · Asakusa &amp; Shibuya</small></span>
+        <span class="toc-page">07</span>
+      </a>
+      <a class="toc-row" href="#day3">
+        <span class="toc-no">03</span>
+        <span class="toc-title">DisneySea &amp; shopping<small>Wed · 27 May · Tokyo</small></span>
+        <span class="toc-page">08</span>
+      </a>
+      <a class="toc-row" href="#day4">
+        <span class="toc-no">04</span>
+        <span class="toc-title">A day at Hogwarts<small>Thu · 28 May · Warner Bros. Studio</small></span>
+        <span class="toc-page">09</span>
+      </a>
+      <a class="toc-row" href="#day5">
+        <span class="toc-no">05</span>
+        <span class="toc-title">A Fuji-side day<small>Fri · 29 May · Oishi Park &amp; Gotemba</small></span>
+        <span class="toc-page">10</span>
+      </a>
+      <a class="toc-row" href="#day6">
+        <span class="toc-no">06</span>
+        <span class="toc-title">320 km/h to old Japan<small>Sat · 30 May · Bullet train to Kyoto</small></span>
+        <span class="toc-page">11</span>
+      </a>
+      <a class="toc-row" href="#day7">
+        <span class="toc-no">07</span>
+        <span class="toc-title">A thousand vermillion gates<small>Sun · 31 May · Kyoto temples</small></span>
+        <span class="toc-page">12</span>
+      </a>
+      <a class="toc-row" href="#day8">
+        <span class="toc-no">08</span>
+        <span class="toc-title">Where the deer bow back<small>Mon · 1 June · Nara, on to Osaka</small></span>
+        <span class="toc-page">13</span>
+      </a>
+      <a class="toc-row" href="#day9">
+        <span class="toc-no">09</span>
+        <span class="toc-title">The nation's kitchen<small>Tue · 2 June · Osaka highlights</small></span>
+        <span class="toc-page">14</span>
+      </a>
+      <a class="toc-row" href="#day10">
+        <span class="toc-no">10</span>
+        <span class="toc-title">A day at Universal<small>Wed · 3 June · USJ</small></span>
+        <span class="toc-page">15</span>
+      </a>
+      <a class="toc-row" href="#day11">
+        <span class="toc-no">11</span>
+        <span class="toc-title">Last gifts, last bites<small>Thu · 4 June · Katsuoji &amp; Shinsaibashi</small></span>
+        <span class="toc-page">16</span>
+      </a>
+      <a class="toc-row" href="#day12">
+        <span class="toc-no">12</span>
+        <span class="toc-title">Sayonara, Japan<small>Fri · 5 June · Departure</small></span>
+        <span class="toc-page">17</span>
+      </a>
+    </div>
+
+    <div class="toc-group part-3">
+      <div class="group-label">Part Three · The Details</div>
+      <div class="group-jp">ご案内 · Practicalities</div>
+
+      <a class="toc-row" href="#emergency">
+        <span class="toc-no">IV</span>
+        <span class="toc-title">Emergency contacts<small>Who to call, day or night</small></span>
+        <span class="toc-page">18</span>
+      </a>
+      <a class="toc-row" href="#dining">
+        <span class="toc-no">V</span>
+        <span class="toc-title">Indian restaurants<small>Where dinner is served</small></span>
+        <span class="toc-page">19</span>
+      </a>
+      <a class="toc-row" href="#notes">
+        <span class="toc-no">VI</span>
+        <span class="toc-title">Important travel notes<small>Good to know</small></span>
+        <span class="toc-page">20</span>
+      </a>
+      <a class="toc-row" href="#essentials">
+        <span class="toc-no">VII</span>
+        <span class="toc-title">Japan essentials<small>Currency, SIM, etiquette</small></span>
+        <span class="toc-page">21</span>
+      </a>
+      <a class="toc-row" href="#packing">
+        <span class="toc-no">VIII</span>
+        <span class="toc-title">Packing list<small>What to bring</small></span>
+        <span class="toc-page">22</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="contents-foot">
+    <div class="pull"><span class="dash">—</span>“The journey of a thousand miles begins with a single step.” &nbsp; <span style="font-family:var(--jp);">老子</span></div>
+    <div style="text-align:right;">
+      Final Itinerary &middot; v1.0 &middot; Prepared by Shreeji Bapa Aviation<br/>
+      For internal use of the named travelling party only
+    </div>
+  </div>
+</section>
+
+<!-- =========================================== AT A GLANCE =========================================== -->
+<section class="page" id="glance" data-screen-label="02 At a Glance">
+  <div class="section-head">
+    <span class="eyebrow center">The Trip in Brief</span>
+    <div class="jp-sub">旅のあらまし</div>
+    <h2>Twelve days, four cities,<br/>one unforgettable journey.</h2>
+    <p class="lede">From Tokyo's electric pulse to Kyoto's quiet temples and Osaka's street-food haze — this is the shape of the days ahead.</p>
+  </div>
+
+  <div class="glance-grid">
+    <div class="glance-cell"><div class="num">12</div><div class="label">Days</div></div>
+    <div class="glance-cell"><div class="num">11</div><div class="label">Nights</div></div>
+    <div class="glance-cell"><div class="num">04</div><div class="label">Cities</div></div>
+    <div class="glance-cell"><div class="num">03</div><div class="label">Premier Hotels</div></div>
+  </div>
+
+  <div class="highlights-grid">
+    <div class="highlight">
+      <div class="h-jp">東京 · Tokyo</div>
+      <h3>Capital electricity</h3>
+      <p>Shibuya's scramble, Senso-ji's incense and the Skytree's view of a city that never quite stops glowing. Five nights to take it in.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">富士山 · Fuji-side</div>
+      <h3>Lakeside &amp; outlets</h3>
+      <p>A day out to Oishi Park on Lake Kawaguchi, with Mt. Fuji watching from the north shore — then Gotemba Premium Outlets for unhurried shopping in the mountain's shadow.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">ハリポタ · Harry Potter</div>
+      <h3>Wizards in Toshimaen</h3>
+      <p>A full day inside Warner Bros. Studio Tokyo — the Great Hall, Diagon Alley, Platform 9¾ and a Butterbeer to finish.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">USJ · Universal</div>
+      <h3>Super Nintendo World &amp; more</h3>
+      <p>A whole day inside Universal Studios Japan in Osaka — Super Nintendo World, the Wizarding World, Hollywood Dream and the Minions.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">新幹線 · Shinkansen</div>
+      <h3>320 km/h between worlds</h3>
+      <p>From Tokyo to Kyoto in under two and a half hours aboard the bullet train — your luggage following separately, so you arrive light.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">京都 · Kyoto</div>
+      <h3>A thousand torii</h3>
+      <p>Fushimi Inari's vermillion gates, the golden pavilion of Kinkaku-ji and Arashiyama's whispering bamboo. Old Japan, gently.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">奈良 · Nara</div>
+      <h3>Where deer bow back</h3>
+      <p>An afternoon among Japan's oldest capital — Todai-ji's giant Buddha and a thousand sacred deer who'll politely wait for crackers.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">大阪 · Osaka</div>
+      <h3>The nation's kitchen</h3>
+      <p>Four nights of takoyaki on Dotonbori, lights on the Glico bridge, and Osaka Castle rising above its moat.</p>
+    </div>
+    <div class="highlight">
+      <div class="h-jp">食 · Cuisine</div>
+      <h3>Eleven Indian dinners</h3>
+      <p>Every evening, a curated Indian restaurant — from Gujarati thalis to Indo-Chinese, with Jain options. Familiar comfort at the end of busy days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================== FLIGHTS =========================================== -->
+<section class="page" id="flights" data-screen-label="03 Flights">
+  <div class="section-head">
+    <span class="eyebrow center">Wings &amp; Wheels</span>
+    <div class="jp-sub">空の便</div>
+    <h2>Your flights.</h2>
+    <p class="lede">Singapore Airlines, both ways. Comfortable, on schedule and gentle on the jet-lag.</p>
+  </div>
+
+  <div class="flights">
+    <div class="flight">
+      <div class="plane">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16l-7-5V4a2 2 0 1 0-4 0v7l-7 5v2l7-2v5l-2 1v1l4-1 4 1v-1l-2-1v-5l7 2z"/></svg>
+      </div>
+      <div>
+        <div class="meta"><b>SQ 012</b> · Arrival · Monday 25 May 2026</div>
+        <div class="route-detail">Singapore (SIN) → Tokyo Narita (NRT)</div>
+        <div class="meta" style="margin-top:6px;">Driver and English-speaking guide will meet you at arrivals · Private coach to Tokyo Dome Hotel</div>
+      </div>
+      <div class="time">17:30<small>Lands NRT</small></div>
+    </div>
+
+    <div class="flight">
+      <div class="plane">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16l-7-5V4a2 2 0 1 0-4 0v7l-7 5v2l7-2v5l-2 1v1l4-1 4 1v-1l-2-1v-5l7 2z"/></svg>
+      </div>
+      <div>
+        <div class="meta"><b>SQ 619</b> · Departure · Friday 5 June 2026</div>
+        <div class="route-detail">Osaka Kansai (KIX) → Singapore (SIN)</div>
+        <div class="meta" style="margin-top:6px;">Private coach to KIX in the morning · Check-in assistance · Goodbye to Japan</div>
+      </div>
+      <div class="time">10:50<small>Departs KIX</small></div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="notes-grid">
+    <div class="note">
+      <h4><span class="badge">Inland</span>Bullet train · Tokyo → Kyoto</h4>
+      <p>Saturday 30 May, second-class reserved seating aboard the Tokaido Shinkansen. A separate luggage truck will move your suitcases door-to-door so you ride the train light.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Coach</span>Private bus throughout</h4>
+      <p>A large air-conditioned private coach with English-speaking guide is yours for the trip. Additional Alphard / Hiace vehicles arranged for the dedicated shopping days.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================== ROUTE + HOTELS =========================================== -->
+<section class="page" id="route" data-screen-label="04 Route and Hotels">
+  <div class="section-head">
+    <span class="eyebrow center">The Route</span>
+    <div class="jp-sub">行程図</div>
+    <h2>Three homes, one journey.</h2>
+    <p class="lede">A neat arc south from Tokyo, with Nara folded in between Kyoto and Osaka.</p>
+  </div>
+
+  <div class="route-map">
+    <div class="route-track">
+      <div class="route-stop">
+        <div class="city">Tokyo</div>
+        <div class="jp-city">東京</div>
+        <div class="dates">25 — 30 May</div>
+        <div class="nights"><b>5</b> nights</div>
+      </div>
+      <div class="route-stop">
+        <div class="city">Kyoto</div>
+        <div class="jp-city">京都</div>
+        <div class="dates">30 May — 1 Jun</div>
+        <div class="nights"><b>2</b> nights</div>
+      </div>
+      <div class="route-stop">
+        <div class="city">Nara</div>
+        <div class="jp-city">奈良</div>
+        <div class="dates">1 June · day-trip</div>
+        <div class="nights">en-route</div>
+      </div>
+      <div class="route-stop">
+        <div class="city">Osaka</div>
+        <div class="jp-city">大阪</div>
+        <div class="dates">1 — 5 June</div>
+        <div class="nights"><b>4</b> nights</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px;">
+    <span class="eyebrow">Where you'll stay</span>
+    <h2 style="font-size:42px; margin-top:14px;">Your hotels.</h2>
+  </div>
+
+  <div class="hotels">
+    <div class="hotel">
+      <div class="img">
+        <image-slot id="hotel-tokyo" placeholder="Drop a Tokyo Dome Hotel photo" radius="0"></image-slot>
+        <div class="badge">Tokyo · 5 nights</div>
+      </div>
+      <div class="body">
+        <div class="city">25 — 30 May 2026</div>
+        <h3>Tokyo Dome Hotel</h3>
+        <div class="stay"><b>Twin Room · Non-smoking</b><br/>9th &amp; 22nd Floor · 33 m²</div>
+        <p class="note">A 43-storey landmark beside Tokyo Dome amusement park — gardens, hot baths and one of the city's better views from your window.</p>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <div class="img">
+        <image-slot id="hotel-kyoto" placeholder="Drop a DoubleTree Kyoto photo" radius="0"></image-slot>
+        <div class="badge">Kyoto · 2 nights</div>
+      </div>
+      <div class="body">
+        <div class="city">30 May — 1 June 2026</div>
+        <h3>DoubleTree by Hilton Kyoto Station</h3>
+        <div class="stay"><b>Queen Guest Room</b><br/>20 m²</div>
+        <p class="note">Steps from Kyoto Station — perfect for the bullet-train arrival, with easy walking to Higashi-Honganji and the Gion-bound buses.</p>
+      </div>
+    </div>
+
+    <div class="hotel">
+      <div class="img">
+        <image-slot id="hotel-osaka" placeholder="Drop a Westin Osaka photo" radius="0"></image-slot>
+        <div class="badge">Osaka · 4 nights</div>
+      </div>
+      <div class="body">
+        <div class="city">1 — 5 June 2026</div>
+        <h3>The Westin Osaka</h3>
+        <div class="stay"><b>Premier Stay</b><br/>Umeda district</div>
+        <p class="note">A green oasis in the heart of Umeda, with heavenly beds, the city's best skyline rooms and direct access to Osaka's shopping arteries.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:32px;">
+    <h4><span class="badge">Reminder</span>City &amp; Hotel Tax</h4>
+    <p>Japanese city / hotel tax is collected at check-in by the hotel directly. Approximate per-person, per-night charges: Tokyo ¥100–200 · Kyoto ¥200–500 · Osaka ¥100–300. Subject to local regulations.</p>
+  </div>
+</section>
+
+<!-- =========================================== DAY 1 =========================================== -->
+<section class="page" data-screen-label="05 Day 1 Arrive Tokyo">
+  <div class="section-head">
+    <span class="eyebrow center">The Days Ahead</span>
+    <div class="jp-sub">日程表</div>
+    <h2 style="font-size:56px;">Day by day.</h2>
+    <p class="lede">Every morning a doorway, every evening a memory. Here is how the days will unfold.</p>
+  </div>
+
+  <article class="day" id="day1">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day One</div>
+        <div class="day-num">01</div>
+        <div class="day-date"><b>Monday</b> · 25 May 2026</div>
+      </div>
+      <div class="city-tag">Tokyo · Arrival</div>
+      <div class="jp-name">東京到着</div>
+    </aside>
+    <div class="day-content">
+      <h2>Welcome to Tokyo.</h2>
+      <p class="day-lead">A late-afternoon arrival at Narita, a private coach into the city, and the quiet pleasure of opening your hotel curtains to neon for the first time.</p>
+      <div class="day-img">
+        <image-slot id="day1-img" placeholder="Drop a photo — Tokyo arrival / city at night" radius="0"></image-slot>
+        <div class="caption">Day 1 · Tokyo arrival</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">17:30<small>SQ 012</small></div>
+          <div class="what"><h4>Touchdown at Narita</h4><p>Land at Narita International. Clear immigration, collect baggage and step into the arrivals lobby — your English-speaking guide will be waiting with the SBA sign.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Masala Bites</h4><p>A warm Gujarati-menu welcome before the hotel — gentle on travel-weary palates and a comforting first taste of the trip.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">21:30<small>check-in</small></div>
+          <div class="what"><h4>Transfer to Tokyo Dome Hotel</h4><p>Comfortable private coach to your home for the next five nights. Settle in, and take a moment to enjoy the view from your high-floor twin room.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Dinner at Indian restaurant · Bottled water (2 × 500ml)</p></div>
+        <div class="day-info"><h5>Travel time</h5><p>NRT → Hotel · approx. 70 min by private coach</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 2 =========================================== -->
+<section class="page" data-screen-label="06 Day 2 Tokyo">
+  <article class="day" id="day2">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Two</div>
+        <div class="day-num">02</div>
+        <div class="day-date"><b>Tuesday</b> · 26 May 2026</div>
+      </div>
+      <div class="city-tag">Tokyo · Classic</div>
+      <div class="jp-name">浅草と渋谷</div>
+    </aside>
+    <div class="day-content">
+      <h2>The Tokyo you've imagined.</h2>
+      <p class="day-lead">Old temples, towering observation decks and the crossing the world knows by sight — a day designed to introduce the city in full voice.</p>
+      <div class="day-img">
+        <image-slot id="day2-img" placeholder="Drop a photo — Senso-ji / Shibuya" radius="0"></image-slot>
+        <div class="caption">Day 2 · Asakusa &amp; Shibuya</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:15<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach rolls out at 09:30 sharp.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>Imperial</small></div>
+          <div class="what"><h4>Photo stop · Imperial Palace</h4><p>A stop at the moats and pine-bordered plaza of the Imperial Palace — the emperor's home, and a calm first frame of Tokyo.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">11:30<small>Asakusa</small></div>
+          <div class="what"><h4>Senso-ji &amp; Nakamise Shopping Arcade</h4><p>Tokyo's oldest temple, founded in 645 AD. Light an incense stick, wash your hands at the chōzuya, then drift down Nakamise's covered lane for melon-pan and souvenirs.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:30<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch break (on own)</h4><p>The guide will recommend a clutch of nearby options — ramen, tempura or a department-store food hall, depending on appetite.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">15:00<small>show</small></div>
+          <div class="what"><h4>Acrobatic Ninja Show</h4><p>A high-energy, family-friendly performance — sword play, somersaults and the secret art of stealth. The children will be transfixed.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">17:00<small>Shibuya</small></div>
+          <div class="what"><h4>Shibuya Crossing &amp; Hachiko</h4><p>Watch the world's busiest pedestrian crossing from above, then join it. A photograph with Hachiko, the world's most loyal dog, before we head back.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Nirvanam Akasaka</h4><p>Papad, paneer mattar, kadai bhindi, gobi Manchurian, kadhi pakoda, dal palak, naan, rice and ice cream. Jain menu available on request.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back to the Tokyo Dome Hotel. Rest up — tomorrow is a full day.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast (hotel) · Dinner at Indian restaurant · Bottled water</p></div>
+        <div class="day-info"><h5>Walking</h5><p>Comfortable shoes essential — plan for 8–10 km on foot</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 3 =========================================== -->
+<section class="page" data-screen-label="07 Day 3 DisneySea Shopping">
+  <article class="day" id="day3">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Three</div>
+        <div class="day-num">03</div>
+        <div class="day-date"><b>Wednesday</b> · 27 May 2026</div>
+      </div>
+      <div class="city-tag">Tokyo · DisneySea / Shopping</div>
+      <div class="jp-name">東京ディズニーシー</div>
+    </aside>
+    <div class="day-content">
+      <h2>DisneySea &amp; the shopping streets.</h2>
+      <p class="day-lead">A two-track day — a small party heads to Tokyo DisneySea while everyone else hits Tokyo's shopping districts with an English-speaking driver. We meet again for dinner.</p>
+      <div class="day-img">
+        <image-slot id="day3-img" placeholder="Drop a photo — Tokyo DisneySea / shopping streets" radius="0"></image-slot>
+        <div class="caption">Day 3 · DisneySea &amp; shopping</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:15<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. We split into the two groups here.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>17 adults + 2 children</small></div>
+          <div class="what"><h4>Tokyo DisneySea · 1-day regular pass</h4><p>The main group heads to the world's only DisneySea — seven themed harbours, world-class rides and a Mediterranean-style lagoon. A full day in the park; the guide will brief you on return arrangements.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">11:00<small>3 pax</small></div>
+          <div class="what"><h4>Shopping in Tokyo</h4><p>English-speaking driver meets the dedicated shopping party of 3 at the hotel. Ginza, Shinjuku, Shibuya, Omotesando — wherever your list takes you, the car waits.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Ganjis River Sunamo</h4><p>Veg spring rolls, hot &amp; sour soup, fried rice, Hakka noodles and halwa — Indo-Chinese, cooked the way home cooks it.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back to the Tokyo Dome Hotel. A quieter night before the magic of tomorrow.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant</p></div>
+        <div class="day-info"><h5>Split</h5><p>DisneySea · 17 adults + 2 children · 1-day regular pass<br/>Shopping · 3 pax · English-speaking driver</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 4 =========================================== -->
+<section class="page" data-screen-label="08 Day 4 Harry Potter">
+  <article class="day" id="day4">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Four</div>
+        <div class="day-num">04</div>
+        <div class="day-date"><b>Thursday</b> · 28 May 2026</div>
+      </div>
+      <div class="city-tag">Tokyo · Warner Bros.</div>
+      <div class="jp-name">ハリポタ・スタジオ</div>
+    </aside>
+    <div class="day-content">
+      <h2>A day at Hogwarts.</h2>
+      <p class="day-lead">Warner Bros. Studio Tour Tokyo — The Making of Harry Potter. The Great Hall, Diagon Alley, the Forbidden Forest and Platform 9¾, all where the world's largest indoor wizarding attraction now stands.</p>
+      <div class="day-img">
+        <image-slot id="day4-img" placeholder="Drop a photo — Warner Bros. Studio Tokyo" radius="0"></image-slot>
+        <div class="caption">Day 4 · Warner Bros. Studio</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">08:45<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 09:00 sharp.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>11 adults + 1 child</small></div>
+          <div class="what"><h4>Warner Bros. Studio Tour Tokyo</h4><p>Step through the great wooden doors of the Great Hall — set just as it appeared in the films. Diagon Alley, the Forbidden Forest, Platform 9¾, the model of Hogwarts itself, plus a Butterbeer in the Backlot Café. Audio guides in English and Japanese.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>9 adults + 1 child</small></div>
+          <div class="what"><h4>Shopping in Tokyo (parallel)</h4><p>English-speaking driver meets the second group at the hotel for a parallel day of unhurried shopping. The car waits between stops.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">15:00<small>Ginza</small></div>
+          <div class="what"><h4>Meet up in Ginza</h4><p>The whole group converges in Ginza — Tokyo's most refined shopping street. Flagships, Itoya for stationery, the Wako clock tower. Free time on your own.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · MOTI Roppongi</h4><p>Papad, dal kachori, gatte ki sabzi, masala paneer, khatti-meethi dal, jeera rice, naan and payasam. A Rajasthani-leaning menu.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Pack lightly tonight; tomorrow we head out toward the Fuji-side.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant · Lunch on own at studio café / in town</p></div>
+        <div class="day-info"><h5>Split</h5><p>WB Studio Tour · 11 adults + 1 child<br/>Shopping · 9 adults + 1 child · English-speaking driver</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 5 =========================================== -->
+<section class="page" data-screen-label="09 Day 5 Fuji-side">
+  <article class="day" id="day5">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Five</div>
+        <div class="day-num">05</div>
+        <div class="day-date"><b>Friday</b> · 29 May 2026</div>
+      </div>
+      <div class="city-tag">Fuji-side · Gotemba</div>
+      <div class="jp-name">富士のふもと</div>
+    </aside>
+    <div class="day-content">
+      <h2>A day in Fuji's shadow.</h2>
+      <p class="day-lead">Out of Tokyo for the day — a calm lakeside park with Mt. Fuji watching from the north shore, then onward to Gotemba's premium outlet for unhurried shopping.</p>
+      <div class="day-img">
+        <image-slot id="day5-img" placeholder="Drop a photo — Oishi Park / Gotemba" radius="0"></image-slot>
+        <div class="caption">Day 5 · Oishi Park &amp; Gotemba</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">07:45<small>meet</small></div>
+          <div class="what"><h4>Early meet</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 08:00 — an early start to beat Tokyo traffic.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>Oishi</small></div>
+          <div class="what"><h4>Oishi Park</h4><p>On the north shore of Lake Kawaguchi — seasonal flowers in the foreground, Mt. Fuji rising across the water. The best photograph of the trip, weather permitting.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:00<small>Gotemba</small></div>
+          <div class="what"><h4>Gotemba Premium Outlets</h4><p>Japan's largest outlet mall, set against Fuji's slopes. International luxury, Japanese labels, sportswear and a long lunch break — free time to wander and shop.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:30<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch on your own</h4><p>The outlet's food court has everything from ramen to teppanyaki to bakery — easy and quick between shopping runs.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">16:30<small>return</small></div>
+          <div class="what"><h4>Leave for Tokyo</h4><p>Doze on the drive back. Roughly 2 hours, traffic depending.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Spice Lounge</h4><p>Papad, paneer tikka, veg Hyderabadi, baingan-mattar, daal, rice and naan, with kulfi to finish. Jain alternates available.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back at the Tokyo Dome Hotel by evening.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">21:00<small>luggage</small></div>
+          <div class="what"><h4>Luggage truck pickup</h4><p>The Yamato luggage truck collects your large suitcases tonight at 21:00 and delivers them to Kyoto for arrival tomorrow evening. <b>Please have your check-in suitcase ready when you meet the guide in the morning</b> — there will not be time to pack after returning.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant · Lunch on own</p></div>
+        <div class="day-info"><h5>Pack tonight</h5><p>Hand suitcase to guide in the morning · Keep an overnight bag for the bullet-train day</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 6 =========================================== -->
+<section class="page" data-screen-label="10 Day 6 Shinkansen">
+  <article class="day" id="day6">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Six</div>
+        <div class="day-num">06</div>
+        <div class="day-date"><b>Saturday</b> · 30 May 2026</div>
+      </div>
+      <div class="city-tag">Tokyo → Kyoto</div>
+      <div class="jp-name">新幹線で京都へ</div>
+    </aside>
+    <div class="day-content">
+      <h2>320 km/h to old Japan.</h2>
+      <p class="day-lead">Tokyo Station to Kyoto Station in just over two hours aboard the Tokaido Shinkansen. Your luggage rides separately — you ride light, with an ekiben on your lap.</p>
+      <div class="day-img">
+        <image-slot id="day6-img" placeholder="Drop a photo — Shinkansen / Kyoto Station / Gion" radius="0"></image-slot>
+        <div class="caption">Day 6 · Bullet train to Kyoto</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:45<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 10:00 — a leisurely Tokyo morning before the train.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:30<small>family fun</small></div>
+          <div class="what"><h4>Crayon Shinchan Mogu Mogu World</h4><p>An immersive indoor attraction starring Japan's beloved cartoon family — themed photo spots, mini-rides and snacks for the children (and the children at heart).</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:00<small>Odaiba</small></div>
+          <div class="what"><h4>Photo stop · Gundam Statue &amp; Statue of Liberty</h4><p>The 20-metre Unicorn Gundam at DiverCity, then the curious sight of New York's lady in the harbour — Odaiba's quarter-scale replica with Rainbow Bridge as backdrop.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:30<small>drive</small></div>
+          <div class="what"><h4>Drive through Rainbow Bridge</h4><p>A scenic crossing of Tokyo Bay's white suspension bridge — the city skyline in your window. Lunch on your own.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">15:00<small>station</small></div>
+          <div class="what"><h4>Transfer to Tokyo Station</h4><p>Coach drops at Tokyo Station's Marunouchi side. The guide assists with platform navigation.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">16:00<small>Shinkansen</small></div>
+          <div class="what"><h4>Bullet train · NOZOMI 267</h4><p>Reserved 2nd-class seats — <b>Car #16, Seats 9A – 13C</b>. Pick up an ekiben on the platform; the rice balls and grilled fish travel beautifully. Watch for Fuji-san on your right.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">18:15<small>arrive</small></div>
+          <div class="what"><h4>Reach Kyoto Station</h4><p>The vast steel-and-glass cathedral of Kyoto Station opens directly onto your hotel.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · DanaPani</h4><p>Papad, veg bhajiya, kadai vegetable, khichdi, kadhi, pulao and kesar sheera — a warm Gujarati welcome to Kyoto.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>check-in</small></div>
+          <div class="what"><h4>Transfer to hotel &amp; check in</h4><p>DoubleTree by Hilton Kyoto Station — a 3-minute walk from the station. Your suitcases will be waiting in your room.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant · Ekiben for the train (on own)</p></div>
+        <div class="day-info"><h5>Included</h5><p>Bullet train (NOZOMI 267 · 2nd-class reserved · Car #16) · Luggage truck Tokyo → Kyoto</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 7 =========================================== -->
+<section class="page" data-screen-label="11 Day 7 Kyoto">
+  <article class="day" id="day7">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Seven</div>
+        <div class="day-num">07</div>
+        <div class="day-date"><b>Sunday</b> · 31 May 2026</div>
+      </div>
+      <div class="city-tag">Kyoto · Temples</div>
+      <div class="jp-name">京都の社寺</div>
+    </aside>
+    <div class="day-content">
+      <h2>A thousand vermillion gates.</h2>
+      <p class="day-lead">The classical Kyoto loop — Fushimi Inari's torii tunnels, Kinkaku-ji's gold-leaf pavilion and Arashiyama's whispering bamboo. A long day, but the one you'll remember.</p>
+      <div class="day-img">
+        <image-slot id="day7-img" placeholder="Drop a photo — Fushimi Inari / Kinkaku-ji / Arashiyama" radius="0"></image-slot>
+        <div class="caption">Day 7 · Kyoto temples</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:15<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 09:30.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>Fushimi</small></div>
+          <div class="what"><h4>Fushimi Inari Taisha</h4><p>The famed Senbon Torii — ten thousand vermillion gates climbing the sacred mountain of the rice god. Walk as far up as the family enjoys.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:30<small>Arashiyama</small></div>
+          <div class="what"><h4>Arashiyama Bamboo Grove</h4><p>Fifteen minutes of green-cathedral hush, light filtering through stalks twenty metres tall. The most photographed grove in Japan.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:00<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch in Arashiyama</h4><p>Yudofu (tofu hot-pot), tempura over rice, or a riverside obanzai set — Kyoto's traditional home-style cuisine.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">15:30<small>Kinkaku-ji</small></div>
+          <div class="what"><h4>Kinkaku-ji · The Golden Pavilion</h4><p>A 14th-century Zen temple covered in gold leaf, mirrored in its mirror pond. Perhaps the most photographed building in Japan, and rightly so.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">17:30<small>Ninja</small></div>
+          <div class="what"><h4>Ninja Samurai Museum &amp; Basic Experience</h4><p>A hands-on hour with the secret arts of the shinobi — try on a samurai's armour, throw a shuriken, learn a few stealth steps. The children will be delighted.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Shorai Kitchen</h4><p>Papad, cheese-corn ball, tomato soup, malai kofta, bhindi masala, dal tadka, roti, naan and rice.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back at the DoubleTree. Pack tonight — we head south to Nara and Osaka in the morning.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant</p></div>
+        <div class="day-info"><h5>Tomorrow</h5><p>Pack — we leave Kyoto in the morning for Nara, then onward to Osaka</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 8 =========================================== -->
+<section class="page" data-screen-label="12 Day 8 Nara Osaka">
+  <article class="day" id="day8">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Eight</div>
+        <div class="day-num">08</div>
+        <div class="day-date"><b>Monday</b> · 1 June 2026</div>
+      </div>
+      <div class="city-tag">Kyoto → Nara → Osaka</div>
+      <div class="jp-name">奈良経由</div>
+    </aside>
+    <div class="day-content">
+      <h2>Where the deer bow back.</h2>
+      <p class="day-lead">Check out of Kyoto and head south to Nara — Japan's first permanent capital, where 1,200 sacred deer wander freely. Onward to Osaka in the evening.</p>
+      <div class="day-img">
+        <image-slot id="day8-img" placeholder="Drop a photo — Nara deer / Todai-ji" radius="0"></image-slot>
+        <div class="caption">Day 8 · Nara, on to Osaka</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:00<small>meet</small></div>
+          <div class="what"><h4>Meet your guide · check out</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 09:15 for the 60-minute drive south to Nara.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:30<small>Kimono</small></div>
+          <div class="what"><h4>Dress up in kimono</h4><p>Slip into traditional kimono at a Nara dressing studio — a beautiful, photographable way to wander Japan's old capital.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">11:00<small>Todai-ji</small></div>
+          <div class="what"><h4>Todai-ji Temple &amp; Great Buddha</h4><p>One of the largest wooden buildings in the world, housing a 15-metre bronze Buddha cast in 752 AD. The squeeze-through-the-pillar tradition is said to grant enlightenment.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:00<small>park</small></div>
+          <div class="what"><h4>Nara Park &amp; the sacred deer</h4><p>Buy a packet of shika-senbei (deer crackers) — the deer have learned to bow for them. They will follow you. The children will scream with joy.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:30<small>lunch · on own</small></div>
+          <div class="what"><h4>Return kimono · lunch in Nara</h4><p>Hand back the kimono, then try kakinoha-zushi (sushi wrapped in persimmon leaf) — a Nara specialty.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">16:00<small>Osaka</small></div>
+          <div class="what"><h4>Umeda Sky Building · Floating Garden</h4><p>Osaka's signature observatory — two towers joined at the top with a glass deck, 173 metres up. The escalator ride between the towers is a thrill in itself.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · ASHOKA</h4><p>Papad, samosa, dam aloo, cabbage-capsicum sabzi, dal tadka, jeera rice, roti, naan and kheer. Jain options available.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>check-in</small></div>
+          <div class="what"><h4>Transfer to The Westin Osaka · check in</h4><p>Heavenly beds and a long, hot shower await. Four nights in Osaka begin here.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant</p></div>
+        <div class="day-info"><h5>Deer tip</h5><p>Bow before offering crackers; they bow back. Keep crackers hidden until ready to give.</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 9 =========================================== -->
+<section class="page" data-screen-label="13 Day 9 Osaka">
+  <article class="day" id="day9">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Nine</div>
+        <div class="day-num">09</div>
+        <div class="day-date"><b>Tuesday</b> · 2 June 2026</div>
+      </div>
+      <div class="city-tag">Osaka · Classic</div>
+      <div class="jp-name">大阪city</div>
+    </aside>
+    <div class="day-content">
+      <h2>The nation's kitchen.</h2>
+      <p class="day-lead">A high-octane Osaka day — a live sumo show with audience challenge, the city's retro-neon valley of Shinsekai, the Tower Slide and Toyotomi Hideyoshi's great castle.</p>
+      <div class="day-img">
+        <image-slot id="day9-img" placeholder="Drop a photo — Osaka Castle / Shinsekai / Tsutenkaku" radius="0"></image-slot>
+        <div class="caption">Day 9 · Osaka highlights</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">09:15<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 09:30.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>Sumo</small></div>
+          <div class="what"><h4>MOC Sumo Show · with Audience Challenge</h4><p>An up-close show with real sumo wrestlers — demonstration bouts, history lesson and the chance for the brave to step into the ring and try a push themselves.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:00<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch · kushikatsu or okonomiyaki</h4><p>Osaka's two signature dishes — skewered, breaded and deep-fried (one dip per skewer, never double-dip); or the savoury cabbage pancake cooked on a hot plate at your table.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:00<small>Shinsekai</small></div>
+          <div class="what"><h4>Tsutenkaku Tower · Tower Slide · Shinsekai</h4><p>Climb the 1956 retro tower for its observation deck, then ride the Tower Slide back down — a 60-metre indoor twist. Wander Shinsekai's neon-and-billiard-hall lanes afterwards.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">16:00<small>Castle</small></div>
+          <div class="what"><h4>Osaka Castle</h4><p>Toyotomi Hideyoshi's great fortress, set within a vast moated park. The eighth-floor observation deck looks out over a city that has burned and risen many times.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · AKASH</h4><p>Menu to be confirmed with the group by 30th May — let your guide know your preferences.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back to the Westin. A long, hot bath earned.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant</p></div>
+        <div class="day-info"><h5>Etiquette</h5><p>One bite, one dip — never double-dip your kushikatsu skewers in the communal sauce.</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 10 =========================================== -->
+<section class="page" data-screen-label="14 Day 10 Universal">
+  <article class="day" id="day10">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Ten</div>
+        <div class="day-num">10</div>
+        <div class="day-date"><b>Wednesday</b> · 3 June 2026</div>
+      </div>
+      <div class="city-tag">Osaka · USJ</div>
+      <div class="jp-name">ユニバーサル</div>
+    </aside>
+    <div class="day-content">
+      <h2>A day at Universal.</h2>
+      <p class="day-lead">An early start for a full day inside Universal Studios Japan — Super Nintendo World, the Wizarding World of Harry Potter, Hollywood thrills and the Minions. One day, one park, one big smile.</p>
+      <div class="day-img">
+        <image-slot id="day10-img" placeholder="Drop a photo — Universal Studios Japan" radius="0"></image-slot>
+        <div class="caption">Day 10 · Universal Studios Japan</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">08:40<small>meet</small></div>
+          <div class="what"><h4>Meet your guide at the hotel</h4><p>An early breakfast, then your English-speaking guide meets at the Westin lobby to escort you to USJ for park opening.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">09:30<small>USJ</small></div>
+          <div class="what"><h4>Universal Studios Japan · 1-day regular pass</h4><p>Super Nintendo World with its life-size Mario Kart, the Wizarding World of Harry Potter, Hollywood Dream coaster, Jurassic Park, Minion Park — pace yourselves, drink water, and pick three "must-do" rides early.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:00<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch in the park</h4><p>The themed cafés are part of the show — Bowser's Café, the Three Broomsticks, the Studio Stars Restaurant. Grab a Butterbeer if you didn't get one in Tokyo.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · Siddhartha Awaza</h4><p>Papad, makkai chaat, lemon-coriander soup, capsicum-besan sabzi, gajar-mattar, naan, veg biryani, raita and gulab jamun.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Back to the Westin. A long, well-earned rest.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant · Lunch on own in park</p></div>
+        <div class="day-info"><h5>Included</h5><p>USJ 1-day regular pass · Guide escort to and from park</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 11 =========================================== -->
+<section class="page" data-screen-label="15 Day 11 Osaka shopping">
+  <article class="day" id="day11">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Eleven</div>
+        <div class="day-num">11</div>
+        <div class="day-date"><b>Thursday</b> · 4 June 2026</div>
+      </div>
+      <div class="city-tag">Osaka · Shopping day</div>
+      <div class="jp-name">買い物の日</div>
+    </aside>
+    <div class="day-content">
+      <h2>Last gifts, last bites.</h2>
+      <p class="day-lead">A morning at Katsuoji — the temple of the lucky daruma dolls — then a Tonbori river cruise through Osaka's neon valley and a final wander down Shinsaibashi for the last of the shopping list.</p>
+      <div class="day-img">
+        <image-slot id="day11-img" placeholder="Drop a photo — Katsuoji / Tonbori / Shinsaibashi" radius="0"></image-slot>
+        <div class="caption">Day 11 · Katsuoji &amp; Shinsaibashi</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">08:45<small>meet</small></div>
+          <div class="what"><h4>Meet your guide</h4><p>English-speaking guide meets at the hotel lobby. Coach departs at 09:00.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:00<small>Katsuoji</small></div>
+          <div class="what"><h4>Katsuoji Temple</h4><p>The "temple of winning luck" — its mossy grounds dotted with thousands of red daruma dolls, each carried up the mountain by a believer with a wish. Buy one of your own; paint in one eye on a goal set, the second when it comes true.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">12:30<small>lunch · on own</small></div>
+          <div class="what"><h4>Lunch in Namba</h4><p>Sushi, ramen or one last okonomiyaki — your guide will recommend.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">13:00<small>Cruise</small></div>
+          <div class="what"><h4>Tonbori River Cruise</h4><p>A 20-minute glide down the Dotonbori canal — the crab sign, the puffer-fish sign, the Glico runner, all best seen from the water with an upbeat captain narrating.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">14:00<small>Shinsaibashi</small></div>
+          <div class="what"><h4>Shinsaibashi shopping street</h4><p>600 metres of covered arcade — fashion, drugstores, electronics, Royce' chocolate and matcha kit-kats for omiyage. The last big shopping run of the trip.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">19:00<small>dinner</small></div>
+          <div class="what"><h4>Dinner at Indian restaurant · AKASH</h4><p>Menu to be confirmed with the group by 30th May — let your guide know your preferences.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">20:00<small>return</small></div>
+          <div class="what"><h4>Return to hotel</h4><p>Pack tonight. A last hot bath, a last view of the Umeda skyline.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast · Dinner at Indian restaurant</p></div>
+        <div class="day-info"><h5>Tomorrow</h5><p>Very early start for KIX — pack tonight, set out clothes for the morning</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== DAY 12 =========================================== -->
+<section class="page" data-screen-label="16 Day 12 Departure">
+  <article class="day" id="day12">
+    <aside class="day-meta">
+      <div class="num-block">
+        <div class="day-label">Day Twelve</div>
+        <div class="day-num">12</div>
+        <div class="day-date"><b>Friday</b> · 5 June 2026</div>
+      </div>
+      <div class="city-tag">Osaka · Departure</div>
+      <div class="jp-name">さようなら</div>
+    </aside>
+    <div class="day-content">
+      <h2>Sayonara, Japan.</h2>
+      <p class="day-lead">An early but easy morning — a private coach to Kansai International, check-in assistance and the long flight home with a suitcase full of stories.</p>
+      <div class="day-img">
+        <image-slot id="day12-img" placeholder="Drop a photo — Departure / sayonara moment" radius="0"></image-slot>
+        <div class="caption">Day 12 · Sayonara</div>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="when">06:00<small>breakfast</small></div>
+          <div class="what"><h4>Early breakfast</h4><p>The Westin opens its breakfast service early — a calm last meal before the airport.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">06:45<small>meet</small></div>
+          <div class="what"><h4>Meet your guide · check out</h4><p>English-speaking guide meets at the hotel lobby for the final transfer.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">07:00<small>coach</small></div>
+          <div class="what"><h4>Coach to Kansai International</h4><p>Private coach to KIX. Around 60 minutes if traffic is kind.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">07:50<small>airport</small></div>
+          <div class="what"><h4>Kansai International (KIX)</h4><p>Check-in assistance, baggage drop, immigration. Time enough for last duty-free purchases and a final matcha latte. End of service from our guide here.</p></div>
+        </div>
+        <div class="moment">
+          <div class="when">10:50<small>SQ 619</small></div>
+          <div class="what"><h4>Departure for Singapore</h4><p>Singapore Airlines lifts off for SIN. Twelve days behind you, a thousand photographs and one promise — to return.</p></div>
+        </div>
+      </div>
+
+      <div class="day-foot">
+        <div class="day-info"><h5>Meals</h5><p>Breakfast at hotel · Onboard meals thereafter</p></div>
+        <div class="day-info"><h5>Reminder</h5><p>Hand baggage rules: liquids ≤100ml, lithium batteries in cabin only.</p></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================== EMERGENCY CONTACTS =========================================== -->
+<section class="page" id="emergency" data-screen-label="17 Emergency Contacts">
+  <div class="section-head">
+    <span class="eyebrow center">Who to Call</span>
+    <div class="jp-sub">緊急連絡先</div>
+    <h2>Emergency contacts.</h2>
+    <p class="lede">Save these numbers in your phone before you fly. Your guide and operator are reachable day or night.</p>
+  </div>
+
+  <div class="notes-grid" style="margin-top:40px;">
+    <div class="note">
+      <h4><span class="badge">Guide</span>Takeshi Shishiba (Mr)</h4>
+      <p style="font-size:15px;">Your English-speaking guide throughout the trip. First point of contact for anything on-the-day — meeting points, schedule changes, restaurants.</p>
+      <p style="margin-top:10px; font-family:var(--serif); font-size:22px; color:var(--rust);"><b>+81&nbsp;90-1775-0448</b></p>
+    </div>
+
+    <div class="note">
+      <h4><span class="badge">Operator</span>Mika Nakamura (Ms)</h4>
+      <p style="font-size:15px;">Director, MIT International — our ground operator in Japan. For emergencies, escalations or if you cannot reach the guide.</p>
+      <p style="margin-top:10px; font-family:var(--serif); font-size:22px; color:var(--rust);"><b>+81&nbsp;80-4497-2355</b></p>
+    </div>
+
+    <div class="note">
+      <h4><span class="badge">Office</span>MIT International Inc.</h4>
+      <p style="font-size:15px;">132-5 Higashi Ikoma Tsukimi-cho, Ikoma, Nara 630-0214, Japan</p>
+      <p style="margin-top:10px;">
+        Tel · <b>+81 50-5532-1255</b><br/>
+        Mobile · <b>+81 80-4497-2355</b>
+      </p>
+    </div>
+
+    <div class="note">
+      <h4><span class="badge">Travel agent</span>Shreeji Bapa Aviation</h4>
+      <p style="font-size:15px;">Your booking agent in India. For pre-trip queries, billing, post-trip support.</p>
+      <p style="margin-top:10px;">Reach out to your relationship manager on the contact details shared at booking.</p>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="section-head" style="margin-top:32px;">
+    <h2 style="font-size:36px;">Public emergency numbers</h2>
+  </div>
+
+  <div class="essentials" style="margin-top:24px;">
+    <div class="ess">
+      <div class="icon-jp">110</div>
+      <h4>Police</h4>
+      <p>Free, 24/7. For theft, accidents, harassment or lost property. English assistance available on request — ask for "English please".</p>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">119</div>
+      <h4>Fire &amp; Ambulance</h4>
+      <p>Free, 24/7. The same number summons both fire services and an ambulance. State clearly: <i>kyukyusha</i> (ambulance) or <i>kaji</i> (fire).</p>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">📞</div>
+      <h4>Tourist helpline</h4>
+      <p>Japan National Tourism Organization · 24/7 English hotline.<br/><b>+81 50-3816-2787</b></p>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">🏥</div>
+      <h4>Medical (AMDA)</h4>
+      <p>Multi-language medical info, 9 am – 8 pm.<br/><b>+81 3-5285-8088</b></p>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">🇮🇳</div>
+      <h4>Embassy of India · Tokyo</h4>
+      <p>2-2-11 Kudan-Minami, Chiyoda-ku, Tokyo.<br/><b>+81 3-3262-2391</b></p>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">🇮🇳</div>
+      <h4>Consulate General · Osaka</h4>
+      <p>Senba I.S. Bldg, 9F, Chuo-ku, Osaka.<br/><b>+81 6-6261-7299</b></p>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:32px;">
+    <h4><span class="badge">Tip</span>Save before you fly</h4>
+    <p>Add Takeshi-san and Mika-san to your phone contacts with the +81 country code before departure. International roaming activates the moment you land — you'll want both numbers ready when you walk into the arrivals hall.</p>
+  </div>
+</section>
+
+<!-- =========================================== INDIAN RESTAURANTS =========================================== -->
+<section class="page" id="dining" data-screen-label="18 Indian Restaurants">
+  <div class="section-head">
+    <span class="eyebrow center">Where Dinner is Served</span>
+    <div class="jp-sub">インド料理</div>
+    <h2>Indian restaurants.</h2>
+    <p class="lede">An Indian dinner every night of the trip — eleven curated kitchens across Tokyo, Kyoto and Osaka.</p>
+  </div>
+
+  <div class="dining-list">
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">25 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Tokyo · Day 1</div>
+        <h3>Masala Bites</h3>
+        <p>Gujarati menu — TBA. A warm welcome dinner on arrival night.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">26 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Tokyo · Day 2 · Akasaka</div>
+        <h3>Nirvanam Akasaka</h3>
+        <p>Papad, paneer mattar sabzi, kadai bhindi, gobi Manchurian, kadhi pakoda, dal palak, vada sambar, naan, roti, rice, ice cream, salad, curd, achar.</p>
+        <p class="dining-jain"><b>Jain</b> · Papad, paneer mattar sabzi, dal palak, paneer chilli, vada with coconut chutney, naan, roti, rice, ice cream, salad, curd, achar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">27 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Tokyo · Day 3 · Sunamo</div>
+        <h3>Ganjis River Sunamo</h3>
+        <p>Papad, veg spring roll, hot &amp; sour soup, veg fried rice, veg Hakka noodle, veg stir fry, halwa, salad, curd, achar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">28 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Tokyo · Day 4 · Roppongi</div>
+        <h3>MOTI Roppongi</h3>
+        <p>Papad, dal kachori, gatte ki sabzi, masala paneer, khatti-meethi dal, roti/naan, jeera rice, mix-bean salad, payasam, curd, achar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">29 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Tokyo · Day 5</div>
+        <h3>Spice Lounge</h3>
+        <p>Papad, paneer tikka, veg Hyderabadi, baingan-mattar sabzi, dal, rice, roti/naan, salad, achar, curd, ice cream.</p>
+        <p class="dining-jain"><b>Jain</b> · Gobi-mattar in place of baingan-mattar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">30 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Kyoto · Day 6</div>
+        <h3>DanaPani</h3>
+        <p>Papad, veg bhajiya, kadai vegetable, khichdi, kadhi, pulao, kesar sheera, salad, curd, achar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">31 May</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Kyoto · Day 7</div>
+        <h3>Shorai Kitchen</h3>
+        <p>Papad, cheese-corn ball, tomato soup, malai kofta, bhindi masala, dal tadka, roti, naan, rice, salad, curd, achar.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">1 June</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Osaka · Day 8</div>
+        <h3>ASHOKA</h3>
+        <p>Papad, samosa, dam aloo, cabbage-capsicum sabzi, dal tadka, jeera rice, roti, naan, salad, achar, curd, kheer.</p>
+        <p class="dining-jain"><b>Jain</b> · Gobi-mattar sabzi in place of dam aloo.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">2 June</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Osaka · Day 9</div>
+        <h3>AKASH</h3>
+        <p>Menu to be confirmed — please share your preferences with the guide by 30th May.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">3 June</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Osaka · Day 10</div>
+        <h3>Siddhartha Awaza</h3>
+        <p>Papad, makkai chaat, lemon-coriander soup, capsicum &amp; besan sabzi, gajar-mattar sabzi, roti/naan, veg biryani, raita, salad, achar, gulab jamun.</p>
+      </div>
+    </div>
+
+    <div class="dining-row">
+      <div class="dining-date">
+        <div class="dining-day">4 June</div>
+        <div class="dining-when">19:00</div>
+      </div>
+      <div class="dining-body">
+        <div class="dining-city">Osaka · Day 11</div>
+        <h3>AKASH</h3>
+        <p>Menu to be confirmed — please share your preferences with the guide by 30th May.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note" style="margin-top:32px;">
+    <h4><span class="badge">Note</span>Menu adjustments</h4>
+    <p>Restaurants and menus are pre-arranged through MIT International. Jain alternates are noted where confirmed. For any allergies or last-minute preferences, please brief your guide a day in advance so the kitchen can prepare.</p>
+  </div>
+</section>
+
+<!-- =========================================== IMPORTANT NOTES =========================================== -->
+<section class="page" id="notes" data-screen-label="19 Important Notes">
+  <div class="section-head">
+    <span class="eyebrow center">Good to Know</span>
+    <div class="jp-sub">大切なご案内</div>
+    <h2>Important travel notes.</h2>
+    <p class="lede">A handful of things to know before you go — and during the days you are here.</p>
+  </div>
+
+  <div class="notes-grid">
+    <div class="note">
+      <h4><span class="badge">Bus law</span>Driver hours regulation</h4>
+      <p>By Japan's Ministry of Land, Infrastructure, Transport &amp; Tourism, the bus may operate a maximum of 10 hours per day, between 09:00 and 20:00 only. The driver must receive a minimum 13-hour rest between duties. This regulation is for passenger safety and cannot be altered. Plan late evenings via taxi or train.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Hotel tax</span>Pay at check-in</h4>
+      <p>Japan's city / hotel tax is paid directly at the hotel at check-in. Approximate per-person, per-night:<br/>
+        · Tokyo · ¥100 – 200<br/>
+        · Kyoto · ¥200 – 500<br/>
+        · Osaka · ¥100 – 300<br/>
+        Subject to local government and hotel policies.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Tickets</span>Shipping &amp; handling</h4>
+      <p>If any ticket arrangements are included or added later, an additional JPY 5,000 will be charged for shipping and handling.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Weather</span>Late May / early June</h4>
+      <p>Pleasant — 18 – 26°C, lengthening days. Late May edges into rainy season (tsuyu) in Kyoto and Osaka — a compact umbrella is wise. Tokyo stays drier and milder.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Tipping</span>Not customary</h4>
+      <p>Tipping is unusual in Japan and may even cause confusion. A small gratuity for your guide and driver at the end of the tour is appreciated but at your discretion.</p>
+    </div>
+    <div class="note">
+      <h4><span class="badge">Health</span>Walking &amp; pace</h4>
+      <p>This tour involves significant walking (often 8 – 12 km per day) and many steps at temples and shrines. Comfortable shoes are essential. Let your guide know of any mobility needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================== JAPAN ESSENTIALS =========================================== -->
+<section class="page" id="essentials" data-screen-label="20 Japan Essentials">
+  <div class="section-head">
+    <span class="eyebrow center">Before You Go</span>
+    <div class="jp-sub">日本の基本</div>
+    <h2>Japan essentials.</h2>
+    <p class="lede">The little things — currency, connectivity, culture — that make the trip feel effortless.</p>
+  </div>
+
+  <div class="essentials">
+    <div class="ess">
+      <div class="icon-jp">¥</div>
+      <h4>Currency</h4>
+      <p>Japan runs on cash more than you'd expect. Carry yen — ATMs at 7-Eleven and Japan Post accept international cards.</p>
+      <div class="kv"><b>1 INR ≈ ¥1.85</b> (approx, May 2026) · Cards accepted at most hotels, larger shops &amp; restaurants</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">📶</div>
+      <h4>SIM &amp; Wi-Fi</h4>
+      <p>Buy a Japan-only travel SIM or eSIM at the airport — Sakura Mobile, Mobal or IIJmio are reliable. Pocket Wi-Fi for the group is another option.</p>
+      <div class="kv"><b>Tip</b> · Hotels offer free Wi-Fi; for buses and trains, a SIM is invaluable</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">⌚</div>
+      <h4>Time &amp; power</h4>
+      <p>Japan Standard Time is 3h 30m ahead of India. Power sockets are Type A (two flat pins, like the US), 100V — carry a universal adapter.</p>
+      <div class="kv"><b>JST · UTC+9</b> · No daylight saving</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">語</div>
+      <h4>Language</h4>
+      <p>English signage is reliable in major stations and tourist sites. Outside that, Google Translate's camera mode is your friend. Learn three words:</p>
+      <div class="kv"><b>Sumimasen</b> · Excuse me / sorry · <b>Arigatou</b> · Thank you · <b>Onegaishimasu</b> · Please</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">礼</div>
+      <h4>Etiquette</h4>
+      <p>Shoes off indoors at temples, ryokan and many restaurants. Don't eat while walking. Don't tip. Bow when in doubt — a small nod is enough.</p>
+      <div class="kv"><b>Chopsticks</b> · Never stick them upright in rice; never pass food chopstick-to-chopstick</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">食</div>
+      <h4>Food for vegetarians</h4>
+      <p>Vegetarian options exist but require care — dashi (fish stock) is in many dishes. Your guide will help. Pure-veg restaurants are noted on the route.</p>
+      <div class="kv"><b>"Niku nashi de onegai shimasu"</b> · Without meat, please</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">📷</div>
+      <h4>Photography</h4>
+      <p>Mostly welcome. Avoid taking photographs of geisha in Gion without consent. Some temple interiors prohibit photos — look for signs.</p>
+      <div class="kv"><b>Drones</b> · Banned in most urban areas — leave them at home</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">🚇</div>
+      <h4>Trains</h4>
+      <p>Tap-in / tap-out Suica or Pasmo IC cards make trains effortless. Your guide can help acquire these on Day 1 if you'd like.</p>
+      <div class="kv"><b>Etiquette</b> · No phone calls on trains · stand left on escalators (right in Osaka)</div>
+    </div>
+    <div class="ess">
+      <div class="icon-jp">⛩</div>
+      <h4>Shrines &amp; temples</h4>
+      <p>Shinto shrines have torii gates; Buddhist temples have bells. Wash hands at the chōzuya, bow at the threshold, drop a coin and clap twice at the offering box.</p>
+      <div class="kv"><b>Quiet voices</b> are appreciated everywhere — especially in gardens and shrines</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================== PACKING =========================================== -->
+<section class="page" id="packing" data-screen-label="21 Packing List">
+  <div class="section-head">
+    <span class="eyebrow center">Pack Smart</span>
+    <div class="jp-sub">持ち物リスト</div>
+    <h2>Packing list.</h2>
+    <p class="lede">Lightweight, breathable, walkable — and one umbrella, always.</p>
+  </div>
+
+  <div class="packing">
+    <div class="pack-cat">
+      <h4>Clothing</h4>
+      <ul>
+        <li>Light layers · t-shirts, light sweater</li>
+        <li>One light jacket / raincoat</li>
+        <li>Comfortable walking trousers</li>
+        <li>One dressier outfit for dinners</li>
+        <li>Socks (you'll remove shoes often)</li>
+        <li>Sleepwear · ryokan robes if any</li>
+      </ul>
+    </div>
+    <div class="pack-cat">
+      <h4>Footwear &amp; bags</h4>
+      <ul>
+        <li>Sturdy walking shoes (broken-in)</li>
+        <li>Slip-on shoes for temples</li>
+        <li>Compact daypack</li>
+        <li>Light foldable shopping bag</li>
+        <li>Compact umbrella</li>
+        <li>Reusable water bottle</li>
+      </ul>
+    </div>
+    <div class="pack-cat">
+      <h4>Tech &amp; documents</h4>
+      <ul>
+        <li>Passport · 6 months validity</li>
+        <li>Visa &amp; printed itinerary</li>
+        <li>Travel insurance papers</li>
+        <li>Universal adapter (Type A, 100V)</li>
+        <li>Power bank · phone, camera chargers</li>
+        <li>Cash · INR &amp; some JPY</li>
+      </ul>
+    </div>
+    <div class="pack-cat">
+      <h4>Health &amp; comfort</h4>
+      <ul>
+        <li>Personal medicines · prescriptions</li>
+        <li>Pocket tissues (public toilets often lack)</li>
+        <li>Hand sanitiser</li>
+        <li>Sunscreen &amp; lip balm</li>
+        <li>Snacks for the children</li>
+        <li>Empty suitcase / duffel for shopping</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="note">
+    <h4><span class="badge">Tip</span>Less is more</h4>
+    <p>Japanese hotel rooms are compact — leave the wheelie suitcase open in a corner, not unpacked. Coin laundries are available in every hotel district if you need to refresh between weeks.</p>
+  </div>
+</section>
+
+<!-- =========================================== CLOSING =========================================== -->
+<section class="closing page no-break" data-screen-label="22 Closing">
+  <div class="jp-mark">ありがとうございました</div>
+  <h2>Have a wonderful journey.</h2>
+  <p class="farewell">May your suitcases come home heavier than they left, your camera fuller, and your hearts a little wider. We're proud to send you on this one.</p>
+  <div class="signoff">
+    <img src="assets/sba-logo.jpg" alt="SBA"/>
+    <div class="name">Shreeji Bapa Aviation<small>Curated Journeys</small></div>
+  </div>
+</section>
+
+</div><!-- /.doc -->
+
+<script>
+  // Smooth-scroll for in-document anchor links (Contents page)
+  // Uses getBoundingClientRect so targets nested inside positioned ancestors land correctly.
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 16;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.replaceState(null, '', id);
+    });
+  });
+</script>
+
+</body>
+</html>
