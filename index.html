@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Japan Itinerary · Ms. Viraj Chudasama & Friends</title>
-<script src="image-slot.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
@@ -273,7 +272,11 @@
     position: relative;
     overflow: hidden;
   }
-  .hotel .img image-slot { width: 100%; height: 100%; display: block; }
+  .hotel .img img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
   .hotel .img .badge {
     position: absolute; top: 16px; left: 16px;
     background: var(--ivory); padding: 6px 12px;
@@ -329,20 +332,17 @@
     background: linear-gradient(135deg, var(--sand) 0%, var(--sand-dark) 100%);
     position: relative; overflow: hidden;
   }
-  .day-img image-slot { width: 100%; height: 100%; display: block; }
+  .day-img img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
   .day-img .caption {
     position: absolute; bottom: 14px; left: 14px;
     background: rgba(250,245,236,0.92); padding: 6px 12px;
     font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
     color: var(--ink); font-weight: 500;
     z-index: 2; pointer-events: none;
-  }
-
-  /* image-slot empty-state styling — warm, on-brand */
-  image-slot {
-    --is-empty-bg: var(--paper);
-    --is-empty-border: 1px dashed var(--sand-dark);
-    --is-empty-fg: var(--mute);
   }
 
   .timeline { margin: 24px 0 28px; }
@@ -1112,7 +1112,7 @@ FINAL ITINERARY</div>
   <div class="hotels">
     <div class="hotel">
       <div class="img">
-        <image-slot id="hotel-tokyo" placeholder="Drop a Tokyo Dome Hotel photo" radius="0"></image-slot>
+        <img src="assets/tokyo-dome-hotel.jpg" alt="Tokyo Dome Hotel">
         <div class="badge">Tokyo · 5 nights</div>
       </div>
       <div class="body">
@@ -1125,7 +1125,7 @@ FINAL ITINERARY</div>
 
     <div class="hotel">
       <div class="img">
-        <image-slot id="hotel-kyoto" placeholder="Drop a DoubleTree Kyoto photo" radius="0"></image-slot>
+        <img src="assets/doubletree-kyoto.jpg" alt="DoubleTree by Hilton Kyoto Station">
         <div class="badge">Kyoto · 2 nights</div>
       </div>
       <div class="body">
@@ -1138,7 +1138,7 @@ FINAL ITINERARY</div>
 
     <div class="hotel">
       <div class="img">
-        <image-slot id="hotel-osaka" placeholder="Drop a Westin Osaka photo" radius="0"></image-slot>
+        <img src="assets/westin-osaka.jpg" alt="The Westin Osaka">
         <div class="badge">Osaka · 4 nights</div>
       </div>
       <div class="body">
@@ -1179,7 +1179,7 @@ FINAL ITINERARY</div>
       <h2>Welcome to Tokyo.</h2>
       <p class="day-lead">A late-afternoon arrival at Narita, a private coach into the city, and the quiet pleasure of opening your hotel curtains to neon for the first time.</p>
       <div class="day-img">
-        <image-slot id="day1-img" placeholder="Drop a photo — Tokyo arrival / city at night" radius="0"></image-slot>
+        <img src="assets/day1-tokyo-arrival.jpg" alt="Tokyo arrival at night">
         <div class="caption">Day 1 · Tokyo arrival</div>
       </div>
 
@@ -1222,7 +1222,7 @@ FINAL ITINERARY</div>
       <h2>The Tokyo you've imagined.</h2>
       <p class="day-lead">Old temples, towering observation decks and the crossing the world knows by sight — a day designed to introduce the city in full voice.</p>
       <div class="day-img">
-        <image-slot id="day2-img" placeholder="Drop a photo — Senso-ji / Shibuya" radius="0"></image-slot>
+        <img src="assets/day2-sensoji-shibuya.jpg" alt="Senso-ji and Shibuya">
         <div class="caption">Day 2 · Asakusa &amp; Shibuya</div>
       </div>
 
@@ -1285,7 +1285,7 @@ FINAL ITINERARY</div>
       <h2>DisneySea &amp; the shopping streets.</h2>
       <p class="day-lead">A two-track day — a small party heads to Tokyo DisneySea while everyone else hits Tokyo's shopping districts with an English-speaking driver. We meet again for dinner.</p>
       <div class="day-img">
-        <image-slot id="day3-img" placeholder="Drop a photo — Tokyo DisneySea / shopping streets" radius="0"></image-slot>
+        <img src="assets/day3-disneysea-shopping.jpg" alt="Tokyo DisneySea and shopping streets">
         <div class="caption">Day 3 · DisneySea &amp; shopping</div>
       </div>
 
@@ -1336,7 +1336,7 @@ FINAL ITINERARY</div>
       <h2>A day at Hogwarts.</h2>
       <p class="day-lead">Warner Bros. Studio Tour Tokyo — The Making of Harry Potter. The Great Hall, Diagon Alley, the Forbidden Forest and Platform 9¾, all where the world's largest indoor wizarding attraction now stands.</p>
       <div class="day-img">
-        <image-slot id="day4-img" placeholder="Drop a photo — Warner Bros. Studio Tokyo" radius="0"></image-slot>
+        <img src="assets/day4-warner-bros-studio.jpg" alt="Warner Bros Studio Tokyo">
         <div class="caption">Day 4 · Warner Bros. Studio</div>
       </div>
 
@@ -1391,7 +1391,7 @@ FINAL ITINERARY</div>
       <h2>A day in Fuji's shadow.</h2>
       <p class="day-lead">Out of Tokyo for the day — a calm lakeside park with Mt. Fuji watching from the north shore, then onward to Gotemba's premium outlet for unhurried shopping.</p>
       <div class="day-img">
-        <image-slot id="day5-img" placeholder="Drop a photo — Oishi Park / Gotemba" radius="0"></image-slot>
+        <img src="assets/day5-oishi-park-gotemba.jpg" alt="Oishi Park and Gotemba">
         <div class="caption">Day 5 · Oishi Park &amp; Gotemba</div>
       </div>
 
@@ -1454,7 +1454,7 @@ FINAL ITINERARY</div>
       <h2>320 km/h to old Japan.</h2>
       <p class="day-lead">Tokyo Station to Kyoto Station in just over two hours aboard the Tokaido Shinkansen. Your luggage rides separately — you ride light, with an ekiben on your lap.</p>
       <div class="day-img">
-        <image-slot id="day6-img" placeholder="Drop a photo — Shinkansen / Kyoto Station / Gion" radius="0"></image-slot>
+        <img src="assets/day6-shinkansen-kyoto.jpg" alt="Shinkansen and Kyoto">
         <div class="caption">Day 6 · Bullet train to Kyoto</div>
       </div>
 
@@ -1521,7 +1521,7 @@ FINAL ITINERARY</div>
       <h2>A thousand vermillion gates.</h2>
       <p class="day-lead">The classical Kyoto loop — Fushimi Inari's torii tunnels, Kinkaku-ji's gold-leaf pavilion and Arashiyama's whispering bamboo. A long day, but the one you'll remember.</p>
       <div class="day-img">
-        <image-slot id="day7-img" placeholder="Drop a photo — Fushimi Inari / Kinkaku-ji / Arashiyama" radius="0"></image-slot>
+        <img src="assets/day7-kyoto-temples.jpg" alt="Fushimi Inari, Kinkakuji and Arashiyama">
         <div class="caption">Day 7 · Kyoto temples</div>
       </div>
 
@@ -1584,7 +1584,7 @@ FINAL ITINERARY</div>
       <h2>Where the deer bow back.</h2>
       <p class="day-lead">Check out of Kyoto and head south to Nara — Japan's first permanent capital, where 1,200 sacred deer wander freely. Onward to Osaka in the evening.</p>
       <div class="day-img">
-        <image-slot id="day8-img" placeholder="Drop a photo — Nara deer / Todai-ji" radius="0"></image-slot>
+        <img src="assets/day8-nara-deer.jpg" alt="Nara deer and Todai-ji">
         <div class="caption">Day 8 · Nara, on to Osaka</div>
       </div>
 
@@ -1647,7 +1647,7 @@ FINAL ITINERARY</div>
       <h2>The nation's kitchen.</h2>
       <p class="day-lead">A high-octane Osaka day — a live sumo show with audience challenge, the city's retro-neon valley of Shinsekai, the Tower Slide and Toyotomi Hideyoshi's great castle.</p>
       <div class="day-img">
-        <image-slot id="day9-img" placeholder="Drop a photo — Osaka Castle / Shinsekai / Tsutenkaku" radius="0"></image-slot>
+        <img src="assets/day9-osaka-highlights.jpg" alt="Osaka Castle and Shinsekai">
         <div class="caption">Day 9 · Osaka highlights</div>
       </div>
 
@@ -1706,7 +1706,7 @@ FINAL ITINERARY</div>
       <h2>A day at Universal.</h2>
       <p class="day-lead">An early start for a full day inside Universal Studios Japan — Super Nintendo World, the Wizarding World of Harry Potter, Hollywood thrills and the Minions. One day, one park, one big smile.</p>
       <div class="day-img">
-        <image-slot id="day10-img" placeholder="Drop a photo — Universal Studios Japan" radius="0"></image-slot>
+        <img src="assets/day10-universal-studios.jpg" alt="Universal Studios Japan">
         <div class="caption">Day 10 · Universal Studios Japan</div>
       </div>
 
@@ -1757,7 +1757,7 @@ FINAL ITINERARY</div>
       <h2>Last gifts, last bites.</h2>
       <p class="day-lead">A morning at Katsuoji — the temple of the lucky daruma dolls — then a Tonbori river cruise through Osaka's neon valley and a final wander down Shinsaibashi for the last of the shopping list.</p>
       <div class="day-img">
-        <image-slot id="day11-img" placeholder="Drop a photo — Katsuoji / Tonbori / Shinsaibashi" radius="0"></image-slot>
+        <img src="assets/day11-katsuoji-shinsaibashi.jpg" alt="Katsuoji, Tonbori River and Shinsaibashi">
         <div class="caption">Day 11 · Katsuoji &amp; Shinsaibashi</div>
       </div>
 
@@ -1816,7 +1816,7 @@ FINAL ITINERARY</div>
       <h2>Sayonara, Japan.</h2>
       <p class="day-lead">An early but easy morning — a private coach to Kansai International, check-in assistance and the long flight home with a suitcase full of stories.</p>
       <div class="day-img">
-        <image-slot id="day12-img" placeholder="Drop a photo — Departure / sayonara moment" radius="0"></image-slot>
+        <img src="assets/day12-sayonara.jpg" alt="Departure from Japan">
         <div class="caption">Day 12 · Sayonara</div>
       </div>
 
